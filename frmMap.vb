@@ -6,6 +6,9 @@
 
     Private Sub lblALDEZAR_Click(sender As Object, e As EventArgs) Handles lblALDEZAR.Click
         PicMap.Image = My.Resources.Aldezar
+        pnlInfo.Visible = True
+        MAP_BARANGAY = "ALDEZAR"
+        lblbarangay.Text = barangay_number(MAP_BARANGAY)
     End Sub
 
     Private Sub lblAWAYAN_Click(sender As Object, e As EventArgs) Handles lblAWAYAN.Click
@@ -165,5 +168,12 @@
         PicMap.Image = My.Resources.Yabo
     End Sub
 
+    Function barangay_number(ByVal barangay As String)
+        openCon()
+        Try
 
+        Catch ex As Exception
+
+        End Try
+    End Function
 End Class
