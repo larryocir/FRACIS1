@@ -231,7 +231,7 @@ Partial Class frmDashboard
         Me.Chart2.ChartAreas.Add(ChartArea2)
         Legend2.Name = "Legend1"
         Me.Chart2.Legends.Add(Legend2)
-        Me.Chart2.Location = New System.Drawing.Point(544, 283)
+        Me.Chart2.Location = New System.Drawing.Point(565, 283)
         Me.Chart2.Name = "Chart2"
         Series2.ChartArea = "ChartArea1"
         Series2.Legend = "Legend1"
