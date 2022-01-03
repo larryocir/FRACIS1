@@ -34,11 +34,6 @@ Partial Class frmFarmers
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.dgrdmember = New System.Windows.Forms.DataGridView()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.chkByBarangay = New System.Windows.Forms.CheckBox()
-        Me.lblFilter = New System.Windows.Forms.Label()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -52,6 +47,11 @@ Partial Class frmFarmers
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.chkByBarangay = New System.Windows.Forms.CheckBox()
+        Me.lblFilter = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -193,61 +193,6 @@ Partial Class frmFarmers
         Me.dgrdmember.Size = New System.Drawing.Size(1023, 502)
         Me.dgrdmember.TabIndex = 0
         '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.Black
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(0, 71)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1047, 5)
-        Me.Panel4.TabIndex = 14
-        '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Panel5.Controls.Add(Me.CheckBox2)
-        Me.Panel5.Controls.Add(Me.chkByBarangay)
-        Me.Panel5.Controls.Add(Me.lblFilter)
-        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel5.Location = New System.Drawing.Point(0, 76)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(1047, 26)
-        Me.Panel5.TabIndex = 15
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CheckBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.Location = New System.Drawing.Point(246, 3)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(81, 21)
-        Me.CheckBox2.TabIndex = 4
-        Me.CheckBox2.Text = "By Name"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'chkByBarangay
-        '
-        Me.chkByBarangay.AutoSize = True
-        Me.chkByBarangay.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.chkByBarangay.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkByBarangay.Location = New System.Drawing.Point(103, 3)
-        Me.chkByBarangay.Name = "chkByBarangay"
-        Me.chkByBarangay.Size = New System.Drawing.Size(105, 21)
-        Me.chkByBarangay.TabIndex = 3
-        Me.chkByBarangay.Text = "By Barangay"
-        Me.chkByBarangay.UseVisualStyleBackColor = True
-        '
-        'lblFilter
-        '
-        Me.lblFilter.AutoSize = True
-        Me.lblFilter.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFilter.Location = New System.Drawing.Point(5, 3)
-        Me.lblFilter.Name = "lblFilter"
-        Me.lblFilter.Size = New System.Drawing.Size(39, 17)
-        Me.lblFilter.TabIndex = 2
-        Me.lblFilter.Text = "Filter"
-        '
         'Column1
         '
         Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
@@ -337,6 +282,61 @@ Partial Class frmFarmers
         Me.Column8.Name = "Column8"
         Me.Column8.ReadOnly = True
         Me.Column8.Width = 130
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.Black
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel4.Location = New System.Drawing.Point(0, 71)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(1047, 5)
+        Me.Panel4.TabIndex = 14
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Panel5.Controls.Add(Me.CheckBox2)
+        Me.Panel5.Controls.Add(Me.chkByBarangay)
+        Me.Panel5.Controls.Add(Me.lblFilter)
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel5.Location = New System.Drawing.Point(0, 76)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(1047, 26)
+        Me.Panel5.TabIndex = 15
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CheckBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox2.Location = New System.Drawing.Point(246, 3)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(81, 21)
+        Me.CheckBox2.TabIndex = 4
+        Me.CheckBox2.Text = "By Name"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'chkByBarangay
+        '
+        Me.chkByBarangay.AutoSize = True
+        Me.chkByBarangay.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.chkByBarangay.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkByBarangay.Location = New System.Drawing.Point(103, 3)
+        Me.chkByBarangay.Name = "chkByBarangay"
+        Me.chkByBarangay.Size = New System.Drawing.Size(105, 21)
+        Me.chkByBarangay.TabIndex = 3
+        Me.chkByBarangay.Text = "By Barangay"
+        Me.chkByBarangay.UseVisualStyleBackColor = True
+        '
+        'lblFilter
+        '
+        Me.lblFilter.AutoSize = True
+        Me.lblFilter.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFilter.Location = New System.Drawing.Point(5, 3)
+        Me.lblFilter.Name = "lblFilter"
+        Me.lblFilter.Size = New System.Drawing.Size(39, 17)
+        Me.lblFilter.TabIndex = 2
+        Me.lblFilter.Text = "Filter"
         '
         'frmFarmers
         '

@@ -898,13 +898,13 @@
 
             frmFarmers.dgrdmember.Rows.Clear()
             Do While reader.Read = True
-                frmFarmers.dgrdmember.Rows.Add(reader(0), reader(2), reader(3), reader(4), reader(5), reader(6), reader(7), reader(8), reader(9), reader(10), reader(12), reader(13), reader(14), reader(15))
+                frmFarmers.dgrdmember.Rows.Add(reader(0), reader(1), reader(2), reader(3), reader(4), reader(5), reader(6), reader(7), reader(8), reader(9), reader(10), reader(12), reader(13), reader(14), reader(15))
             Loop
             frmFarmers.Label4.Visible = False
         Catch ex As Exception
             MsgBox(ex.ToString)
         Finally
-            cmd.Parameters.Clear()
+
             cmd.Dispose()
             con.Close()
         End Try
@@ -939,4 +939,6 @@
             End If
         Next cc
     End Sub
+
+
 End Class

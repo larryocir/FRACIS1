@@ -63,6 +63,7 @@
         pnlContainer.Controls.Add(frmMap)
         frmMap.Show()
         frmMap.PicMap.Image = My.Resources.Map_of_Sipocot
+        frmMap.pnlInfo.Visible = False
 
         btnMap.BackColor = Color.FromArgb(26, 188, 156)
         btnDash.BackColor = Color.FromArgb(46, 204, 113)

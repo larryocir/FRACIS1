@@ -28,13 +28,13 @@ Partial Class frmMap
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.pnlInfo = New System.Windows.Forms.Panel()
         Me.lblbarangay = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.lblPoultryNo = New System.Windows.Forms.Label()
+        Me.lblLivestockNo = New System.Windows.Forms.Label()
+        Me.lblHvcdpNo = New System.Windows.Forms.Label()
+        Me.lblCoconutNo = New System.Windows.Forms.Label()
+        Me.lblCornNo = New System.Windows.Forms.Label()
+        Me.lblRiceNo = New System.Windows.Forms.Label()
+        Me.lblAgriArea = New System.Windows.Forms.Label()
         Me.lblRegMemNo = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -147,13 +147,13 @@ Partial Class frmMap
         '
         Me.pnlInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pnlInfo.Controls.Add(Me.lblbarangay)
-        Me.pnlInfo.Controls.Add(Me.Label19)
-        Me.pnlInfo.Controls.Add(Me.Label18)
-        Me.pnlInfo.Controls.Add(Me.Label17)
-        Me.pnlInfo.Controls.Add(Me.Label16)
-        Me.pnlInfo.Controls.Add(Me.Label15)
-        Me.pnlInfo.Controls.Add(Me.Label14)
-        Me.pnlInfo.Controls.Add(Me.Label13)
+        Me.pnlInfo.Controls.Add(Me.lblPoultryNo)
+        Me.pnlInfo.Controls.Add(Me.lblLivestockNo)
+        Me.pnlInfo.Controls.Add(Me.lblHvcdpNo)
+        Me.pnlInfo.Controls.Add(Me.lblCoconutNo)
+        Me.pnlInfo.Controls.Add(Me.lblCornNo)
+        Me.pnlInfo.Controls.Add(Me.lblRiceNo)
+        Me.pnlInfo.Controls.Add(Me.lblAgriArea)
         Me.pnlInfo.Controls.Add(Me.lblRegMemNo)
         Me.pnlInfo.Controls.Add(Me.Label11)
         Me.pnlInfo.Controls.Add(Me.Label10)
@@ -164,9 +164,9 @@ Partial Class frmMap
         Me.pnlInfo.Controls.Add(Me.Label5)
         Me.pnlInfo.Controls.Add(Me.Label3)
         Me.pnlInfo.Controls.Add(Me.Label2)
-        Me.pnlInfo.Location = New System.Drawing.Point(10, 201)
+        Me.pnlInfo.Location = New System.Drawing.Point(7, 201)
         Me.pnlInfo.Name = "pnlInfo"
-        Me.pnlInfo.Size = New System.Drawing.Size(189, 227)
+        Me.pnlInfo.Size = New System.Drawing.Size(202, 227)
         Me.pnlInfo.TabIndex = 1
         Me.pnlInfo.Visible = False
         '
@@ -182,82 +182,82 @@ Partial Class frmMap
         Me.lblbarangay.Text = "BARANGAY"
         Me.lblbarangay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label19
+        'lblPoultryNo
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.ForeColor = System.Drawing.Color.Red
-        Me.Label19.Location = New System.Drawing.Point(60, 193)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(37, 20)
-        Me.Label19.TabIndex = 16
-        Me.Label19.Text = "0000"
+        Me.lblPoultryNo.AutoSize = True
+        Me.lblPoultryNo.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPoultryNo.ForeColor = System.Drawing.Color.Red
+        Me.lblPoultryNo.Location = New System.Drawing.Point(60, 193)
+        Me.lblPoultryNo.Name = "lblPoultryNo"
+        Me.lblPoultryNo.Size = New System.Drawing.Size(37, 20)
+        Me.lblPoultryNo.TabIndex = 16
+        Me.lblPoultryNo.Text = "0000"
         '
-        'Label18
+        'lblLivestockNo
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.ForeColor = System.Drawing.Color.Red
-        Me.Label18.Location = New System.Drawing.Point(74, 173)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(37, 20)
-        Me.Label18.TabIndex = 15
-        Me.Label18.Text = "0000"
+        Me.lblLivestockNo.AutoSize = True
+        Me.lblLivestockNo.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLivestockNo.ForeColor = System.Drawing.Color.Red
+        Me.lblLivestockNo.Location = New System.Drawing.Point(74, 173)
+        Me.lblLivestockNo.Name = "lblLivestockNo"
+        Me.lblLivestockNo.Size = New System.Drawing.Size(37, 20)
+        Me.lblLivestockNo.TabIndex = 15
+        Me.lblLivestockNo.Text = "0000"
         '
-        'Label17
+        'lblHvcdpNo
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.ForeColor = System.Drawing.Color.Red
-        Me.Label17.Location = New System.Drawing.Point(60, 153)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(37, 20)
-        Me.Label17.TabIndex = 14
-        Me.Label17.Text = "0000"
+        Me.lblHvcdpNo.AutoSize = True
+        Me.lblHvcdpNo.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHvcdpNo.ForeColor = System.Drawing.Color.Red
+        Me.lblHvcdpNo.Location = New System.Drawing.Point(60, 153)
+        Me.lblHvcdpNo.Name = "lblHvcdpNo"
+        Me.lblHvcdpNo.Size = New System.Drawing.Size(37, 20)
+        Me.lblHvcdpNo.TabIndex = 14
+        Me.lblHvcdpNo.Text = "0000"
         '
-        'Label16
+        'lblCoconutNo
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.Red
-        Me.Label16.Location = New System.Drawing.Point(67, 133)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(37, 20)
-        Me.Label16.TabIndex = 13
-        Me.Label16.Text = "0000"
+        Me.lblCoconutNo.AutoSize = True
+        Me.lblCoconutNo.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCoconutNo.ForeColor = System.Drawing.Color.Red
+        Me.lblCoconutNo.Location = New System.Drawing.Point(67, 133)
+        Me.lblCoconutNo.Name = "lblCoconutNo"
+        Me.lblCoconutNo.Size = New System.Drawing.Size(37, 20)
+        Me.lblCoconutNo.TabIndex = 13
+        Me.lblCoconutNo.Text = "0000"
         '
-        'Label15
+        'lblCornNo
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.Color.Red
-        Me.Label15.Location = New System.Drawing.Point(45, 113)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(37, 20)
-        Me.Label15.TabIndex = 12
-        Me.Label15.Text = "0000"
+        Me.lblCornNo.AutoSize = True
+        Me.lblCornNo.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCornNo.ForeColor = System.Drawing.Color.Red
+        Me.lblCornNo.Location = New System.Drawing.Point(45, 113)
+        Me.lblCornNo.Name = "lblCornNo"
+        Me.lblCornNo.Size = New System.Drawing.Size(37, 20)
+        Me.lblCornNo.TabIndex = 12
+        Me.lblCornNo.Text = "0000"
         '
-        'Label14
+        'lblRiceNo
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.Red
-        Me.Label14.Location = New System.Drawing.Point(42, 93)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(37, 20)
-        Me.Label14.TabIndex = 11
-        Me.Label14.Text = "0000"
+        Me.lblRiceNo.AutoSize = True
+        Me.lblRiceNo.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRiceNo.ForeColor = System.Drawing.Color.Red
+        Me.lblRiceNo.Location = New System.Drawing.Point(42, 93)
+        Me.lblRiceNo.Name = "lblRiceNo"
+        Me.lblRiceNo.Size = New System.Drawing.Size(37, 20)
+        Me.lblRiceNo.TabIndex = 11
+        Me.lblRiceNo.Text = "0000"
         '
-        'Label13
+        'lblAgriArea
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.Red
-        Me.Label13.Location = New System.Drawing.Point(120, 53)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(37, 20)
-        Me.Label13.TabIndex = 10
-        Me.Label13.Text = "0000"
+        Me.lblAgriArea.AutoSize = True
+        Me.lblAgriArea.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAgriArea.ForeColor = System.Drawing.Color.Red
+        Me.lblAgriArea.Location = New System.Drawing.Point(120, 53)
+        Me.lblAgriArea.Name = "lblAgriArea"
+        Me.lblAgriArea.Size = New System.Drawing.Size(37, 20)
+        Me.lblAgriArea.TabIndex = 10
+        Me.lblAgriArea.Text = "0000"
         '
         'lblRegMemNo
         '
@@ -937,13 +937,13 @@ Partial Class frmMap
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label19 As Label
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label13 As Label
+    Friend WithEvents lblPoultryNo As Label
+    Friend WithEvents lblLivestockNo As Label
+    Friend WithEvents lblHvcdpNo As Label
+    Friend WithEvents lblCoconutNo As Label
+    Friend WithEvents lblCornNo As Label
+    Friend WithEvents lblRiceNo As Label
+    Friend WithEvents lblAgriArea As Label
     Friend WithEvents lblRegMemNo As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents lblbarangay As Label
