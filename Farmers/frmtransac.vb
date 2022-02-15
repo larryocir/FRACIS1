@@ -1,5 +1,5 @@
 ﻿Public Class frmtransac
-
+    Dim index As Integer
     Private Sub frmtransac_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Button3.Enabled = False
         If cbCivilStatus.SelectedIndex = 1 Then
@@ -99,7 +99,7 @@
             SGRSBSA = ""
             con.Close()
             InsertFarmProfile()
-            CHECKBOX_INSERT()
+            'CHECKBOX_INSERT()
             Call loadTable()
             MsgBox("Successfullly Added Record!")
             ClearAll()
@@ -174,222 +174,223 @@
 
 
     'COMMODITIES CHECKED CHANGED
-    Private Sub chkRice_CheckedChanged(sender As Object, e As EventArgs) Handles chkRice.CheckedChanged
-        If chkRice.Checked = True Then
-            txtRice.Enabled = True
-            txtRice.BackColor = Color.White
-            txtRice.Focus()
+    'Private Sub chkRice_CheckedChanged(sender As Object, e As EventArgs) Handles chkRice.CheckedChanged
+    '    If chkRice.Checked = True Then
+    '        txtRice.Enabled = True
+    '        txtRice.BackColor = Color.White
+    '        txtRice.Focus()
 
-        Else
-            txtRice.Enabled = False
-            txtRice.Clear()
-            txtRice.BackColor = Color.FromArgb(227, 227, 227)
-        End If
-    End Sub
+    '    Else
+    '        txtRice.Enabled = False
+    '        txtRice.Clear()
+    '        txtRice.BackColor = Color.FromArgb(227, 227, 227)
+    '    End If
+    'End Sub
 
-    Private Sub chkCorn_CheckedChanged(sender As Object, e As EventArgs) Handles chkCorn.CheckedChanged
-        If chkCorn.Checked = True Then
-            txtCorn.Enabled = True
-            txtCorn.BackColor = Color.White
-            txtCorn.Focus()
-        Else
-            txtCorn.Enabled = False
-            txtCorn.Clear()
-            txtCorn.BackColor = Color.FromArgb(227, 227, 227)
-        End If
-    End Sub
+    'Private Sub chkCorn_CheckedChanged(sender As Object, e As EventArgs) Handles chkCorn.CheckedChanged
+    '    If chkCorn.Checked = True Then
+    '        txtCorn.Enabled = True
+    '        txtCorn.BackColor = Color.White
+    '        txtCorn.Focus()
+    '    Else
+    '        txtCorn.Enabled = False
+    '        txtCorn.Clear()
+    '        txtCorn.BackColor = Color.FromArgb(227, 227, 227)
+    '    End If
+    'End Sub
 
-    Private Sub chkCoconut_CheckedChanged(sender As Object, e As EventArgs) Handles chkCoconut.CheckedChanged
-        If chkCoconut.Checked = True Then
-            txtCoconut.Enabled = True
-            txtCoconut.BackColor = Color.White
-            txtCoconut.Focus()
-        Else
-            txtCoconut.Enabled = False
-            txtCoconut.Clear()
-            txtCoconut.BackColor = Color.FromArgb(227, 227, 227)
-        End If
-    End Sub
+    'Private Sub chkCoconut_CheckedChanged(sender As Object, e As EventArgs) Handles chkCoconut.CheckedChanged
+    '    If chkCoconut.Checked = True Then
+    '        txtCoconut.Enabled = True
+    '        txtCoconut.BackColor = Color.White
+    '        txtCoconut.Focus()
+    '    Else
+    '        txtCoconut.Enabled = False
+    '        txtCoconut.Clear()
+    '        txtCoconut.BackColor = Color.FromArgb(227, 227, 227)
+    '    End If
+    'End Sub
 
-    Private Sub chkHVCDP_CheckedChanged(sender As Object, e As EventArgs) Handles chkHVCDP.CheckedChanged
-        If chkHVCDP.Checked = True Then
-            chkVegetables.Enabled = True
-            chkFruits.Enabled = True
-            chkRootCrops.Enabled = True
-        Else
-            chkVegetables.Enabled = False
-            chkFruits.Enabled = False
-            chkRootCrops.Enabled = False
-            txtRootCrops.Clear()
-            txtFruits.Clear()
-            txtVegetables.Clear()
-        End If
-    End Sub
+    'Private Sub chkHVCDP_CheckedChanged(sender As Object, e As EventArgs) Handles chkHVCDP.CheckedChanged
+    '    If chkHVCDP.Checked = True Then
+    '        chkVegetables.Enabled = True
+    '        chkFruits.Enabled = True
+    '        chkRootCrops.Enabled = True
+    '    Else
+    '        chkVegetables.Enabled = False
+    '        chkFruits.Enabled = False
+    '        chkRootCrops.Enabled = False
+    '        txtRootCrops.Clear()
+    '        txtFruits.Clear()
+    '        txtVegetables.Clear()
+    '    End If
+    'End Sub
 
-    Private Sub chkVegetables_CheckedChanged(sender As Object, e As EventArgs) Handles chkVegetables.CheckedChanged
-        If chkVegetables.Checked = True Then
-            txtVegetables.Enabled = True
-            txtVegetables.BackColor = Color.White
-            txtVegetables.Focus()
-        Else
-            txtVegetables.Enabled = False
-            txtVegetables.Clear()
-            txtVegetables.BackColor = Color.FromArgb(227, 227, 227)
-        End If
-    End Sub
+    'Private Sub chkVegetables_CheckedChanged(sender As Object, e As EventArgs) Handles chkVegetables.CheckedChanged
+    '    If chkVegetables.Checked = True Then
+    '        txtVegetables.Enabled = True
+    '        txtVegetables.BackColor = Color.White
+    '        txtVegetables.Focus()
+    '    Else
+    '        txtVegetables.Enabled = False
+    '        txtVegetables.Clear()
+    '        txtVegetables.BackColor = Color.FromArgb(227, 227, 227)
+    '    End If
+    'End Sub
 
-    Private Sub chkFruits_CheckedChanged(sender As Object, e As EventArgs) Handles chkFruits.CheckedChanged
-        If chkFruits.Checked = True Then
-            txtFruits.Enabled = True
-            txtFruits.BackColor = Color.White
-            txtFruits.Focus()
-        Else
-            txtFruits.Enabled = False
-            txtFruits.Clear()
-            txtFruits.BackColor = Color.FromArgb(227, 227, 227)
-        End If
-    End Sub
+    'Private Sub chkFruits_CheckedChanged(sender As Object, e As EventArgs) Handles chkFruits.CheckedChanged
+    '    If chkFruits.Checked = True Then
+    '        txtFruits.Enabled = True
+    '        txtFruits.BackColor = Color.White
+    '        txtFruits.Focus()
+    '    Else
+    '        txtFruits.Enabled = False
+    '        txtFruits.Clear()
+    '        txtFruits.BackColor = Color.FromArgb(227, 227, 227)
+    '    End If
+    'End Sub
 
-    Private Sub chkRootCrops_CheckedChanged(sender As Object, e As EventArgs) Handles chkRootCrops.CheckedChanged
-        If chkRootCrops.Checked = True Then
-            txtRootCrops.Enabled = True
-            txtRootCrops.BackColor = Color.White
-            txtRootCrops.Focus()
-        Else
-            txtRootCrops.Enabled = False
-            txtRootCrops.Clear()
-            txtRootCrops.BackColor = Color.FromArgb(227, 227, 227)
-        End If
-    End Sub
+    'Private Sub chkRootCrops_CheckedChanged(sender As Object, e As EventArgs) Handles chkRootCrops.CheckedChanged
+    '    If chkRootCrops.Checked = True Then
+    '        txtRootCrops.Enabled = True
+    '        txtRootCrops.BackColor = Color.White
+    '        txtRootCrops.Focus()
+    '    Else
+    '        txtRootCrops.Enabled = False
+    '        txtRootCrops.Clear()
+    '        txtRootCrops.BackColor = Color.FromArgb(227, 227, 227)
+    '    End If
+    'End Sub
 
-    Private Sub chkCarabao_CheckedChanged(sender As Object, e As EventArgs) Handles chkCarabao.CheckedChanged
-        If chkCarabao.Checked = True Then
-            txtCarabao.Enabled = True
-            txtCarabao.BackColor = Color.White
-            txtCarabao.Focus()
-        Else
-            txtCarabao.Enabled = False
-            txtCarabao.Clear()
-            txtCarabao.BackColor = Color.FromArgb(227, 227, 227)
-        End If
-    End Sub
+    'Private Sub chkCarabao_CheckedChanged(sender As Object, e As EventArgs) Handles chkCarabao.CheckedChanged
+    '    If chkCarabao.Checked = True Then
+    '        txtCarabao.Enabled = True
+    '        txtCarabao.BackColor = Color.White
+    '        txtCarabao.Focus()
+    '    Else
+    '        txtCarabao.Enabled = False
+    '        txtCarabao.Clear()
+    '        txtCarabao.BackColor = Color.FromArgb(227, 227, 227)
+    '    End If
+    'End Sub
 
-    Private Sub chkCattle_CheckedChanged(sender As Object, e As EventArgs) Handles chkCattle.CheckedChanged
-        If chkCattle.Checked = True Then
-            txtCattle.Enabled = True
-            txtCattle.BackColor = Color.White
-            txtCattle.Focus()
-        Else
-            txtCattle.Enabled = False
-            txtCattle.Clear()
-            txtCattle.BackColor = Color.FromArgb(227, 227, 227)
-        End If
-    End Sub
+    'Private Sub chkCattle_CheckedChanged(sender As Object, e As EventArgs) Handles chkCattle.CheckedChanged
+    '    If chkCattle.Checked = True Then
+    '        txtCattle.Enabled = True
+    '        txtCattle.BackColor = Color.White
+    '        txtCattle.Focus()
+    '    Else
+    '        txtCattle.Enabled = False
+    '        txtCattle.Clear()
+    '        txtCattle.BackColor = Color.FromArgb(227, 227, 227)
+    '    End If
+    'End Sub
 
-    Private Sub chkSwine_CheckedChanged(sender As Object, e As EventArgs) Handles chkSwine.CheckedChanged
-        If chkSwine.Checked = True Then
-            txtSwine.Enabled = True
-            txtSwine.BackColor = Color.White
-            txtSwine.Focus()
-        Else
-            txtSwine.Enabled = False
-            txtSwine.Clear()
-            txtSwine.BackColor = Color.FromArgb(227, 227, 227)
-        End If
-    End Sub
+    'Private Sub chkSwine_CheckedChanged(sender As Object, e As EventArgs) Handles chkSwine.CheckedChanged
+    '    If chkSwine.Checked = True Then
+    '        txtSwine.Enabled = True
+    '        txtSwine.BackColor = Color.White
+    '        txtSwine.Focus()
+    '    Else
+    '        txtSwine.Enabled = False
+    '        txtSwine.Clear()
+    '        txtSwine.BackColor = Color.FromArgb(227, 227, 227)
+    '    End If
+    'End Sub
 
-    Private Sub chkGoat_CheckedChanged(sender As Object, e As EventArgs) Handles chkGoat.CheckedChanged
-        If chkGoat.Checked = True Then
-            txtGoat.Enabled = True
-            txtGoat.BackColor = Color.White
-            txtGoat.Focus()
-        Else
-            txtGoat.Enabled = False
-            txtGoat.Clear()
-            txtGoat.BackColor = Color.FromArgb(227, 227, 227)
-        End If
-    End Sub
+    'Private Sub chkGoat_CheckedChanged(sender As Object, e As EventArgs) Handles chkGoat.CheckedChanged
+    '    If chkGoat.Checked = True Then
+    '        txtGoat.Enabled = True
+    '        txtGoat.BackColor = Color.White
+    '        txtGoat.Focus()
+    '    Else
+    '        txtGoat.Enabled = False
+    '        txtGoat.Clear()
+    '        txtGoat.BackColor = Color.FromArgb(227, 227, 227)
+    '    End If
+    'End Sub
 
-    Private Sub chkChicken_CheckedChanged(sender As Object, e As EventArgs) Handles chkChicken.CheckedChanged
-        If chkChicken.Checked = True Then
-            txtChicken.Enabled = True
-            txtChicken.BackColor = Color.White
-            txtChicken.Focus()
-        Else
-            txtChicken.Enabled = False
-            txtChicken.Clear()
-            txtChicken.BackColor = Color.FromArgb(227, 227, 227)
-        End If
-    End Sub
+    'Private Sub chkChicken_CheckedChanged(sender As Object, e As EventArgs) Handles chkChicken.CheckedChanged
+    '    If chkChicken.Checked = True Then
+    '        txtChicken.Enabled = True
+    '        txtChicken.BackColor = Color.White
+    '        txtChicken.Focus()
+    '    Else
+    '        txtChicken.Enabled = False
+    '        txtChicken.Clear()
+    '        txtChicken.BackColor = Color.FromArgb(227, 227, 227)
+    '    End If
+    'End Sub
 
-    Private Sub chkDuck_CheckedChanged(sender As Object, e As EventArgs) Handles chkDuck.CheckedChanged
-        If chkDuck.Checked = True Then
-            txtDuck.Enabled = True
-            txtDuck.BackColor = Color.White
-            txtDuck.Focus()
-        Else
-            txtDuck.Enabled = False
-            txtDuck.Clear()
-            txtDuck.BackColor = Color.FromArgb(227, 227, 227)
-        End If
-    End Sub
+    'Private Sub chkDuck_CheckedChanged(sender As Object, e As EventArgs) Handles chkDuck.CheckedChanged
+    '    If chkDuck.Checked = True Then
+    '        txtDuck.Enabled = True
+    '        txtDuck.BackColor = Color.White
+    '        txtDuck.Focus()
+    '    Else
+    '        txtDuck.Enabled = False
+    '        txtDuck.Clear()
+    '        txtDuck.BackColor = Color.FromArgb(227, 227, 227)
+    '    End If
+    'End Sub
 
-    Private Sub chkTurkey_CheckedChanged(sender As Object, e As EventArgs) Handles chkTurkey.CheckedChanged
-        If chkTurkey.Checked = True Then
-            txtTurkey.Enabled = True
-            txtTurkey.BackColor = Color.White
-            txtTurkey.Focus()
-        Else
-            txtTurkey.Enabled = False
-            txtTurkey.Clear()
-            txtTurkey.BackColor = Color.FromArgb(227, 227, 227)
-        End If
-    End Sub
+    'Private Sub chkTurkey_CheckedChanged(sender As Object, e As EventArgs) Handles chkTurkey.CheckedChanged
+    '    If chkTurkey.Checked = True Then
+    '        txtTurkey.Enabled = True
+    '        txtTurkey.BackColor = Color.White
+    '        txtTurkey.Focus()
+    '    Else
+    '        txtTurkey.Enabled = False
+    '        txtTurkey.Clear()
+    '        txtTurkey.BackColor = Color.FromArgb(227, 227, 227)
+    '    End If
+    'End Sub
 
-    Private Sub chkGoose_CheckedChanged(sender As Object, e As EventArgs) Handles chkGoose.CheckedChanged
-        If chkGoose.Checked = True Then
-            txtGoose.Enabled = True
-            txtGoose.BackColor = Color.White
-            txtGoose.Focus()
-        Else
-            txtGoose.Enabled = False
-            txtGoose.Clear()
-            txtGoose.BackColor = Color.FromArgb(227, 227, 227)
-        End If
-    End Sub
+    'Private Sub chkGoose_CheckedChanged(sender As Object, e As EventArgs) Handles chkGoose.CheckedChanged
+    '    If chkGoose.Checked = True Then
+    '        txtGoose.Enabled = True
+    '        txtGoose.BackColor = Color.White
+    '        txtGoose.Focus()
+    '    Else
+    '        txtGoose.Enabled = False
+    '        txtGoose.Clear()
+    '        txtGoose.BackColor = Color.FromArgb(227, 227, 227)
+    '    End If
+    'End Sub
 
-    Private Sub chkDog_CheckedChanged(sender As Object, e As EventArgs) Handles chkDog.CheckedChanged
-        If chkDog.Checked = True Then
-            txtDog.Enabled = True
-            txtDog.BackColor = Color.White
-            txtDog.Focus()
-        Else
-            txtDog.Enabled = False
-            txtDog.Clear()
-            txtDog.BackColor = Color.FromArgb(227, 227, 227)
-        End If
-    End Sub
+    'Private Sub chkDog_CheckedChanged(sender As Object, e As EventArgs) Handles chkDog.CheckedChanged
+    '    If chkDog.Checked = True Then
+    '        txtDog.Enabled = True
+    '        txtDog.BackColor = Color.White
+    '        txtDog.Focus()
+    '    Else
+    '        txtDog.Enabled = False
+    '        txtDog.Clear()
+    '        txtDog.BackColor = Color.FromArgb(227, 227, 227)
+    '    End If
+    'End Sub
 
-    Private Sub chkCat_CheckedChanged(sender As Object, e As EventArgs) Handles chkCat.CheckedChanged
-        If chkCat.Checked = True Then
-            txtCat.Enabled = True
-            txtCat.BackColor = Color.White
-            txtCat.Focus()
-        Else
-            txtCat.Enabled = False
-            txtCat.Clear()
-            txtCat.BackColor = Color.FromArgb(227, 227, 227)
-        End If
-    End Sub
+    'Private Sub chkCat_CheckedChanged(sender As Object, e As EventArgs) Handles chkCat.CheckedChanged
+    '    If chkCat.Checked = True Then
+    '        txtCat.Enabled = True
+    '        txtCat.BackColor = Color.White
+    '        txtCat.Focus()
+    '    Else
+    '        txtCat.Enabled = False
+    '        txtCat.Clear()
+    '        txtCat.BackColor = Color.FromArgb(227, 227, 227)
+    '    End If
+    'End Sub
 
 
-    Private Sub txtFarmArea_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtFarmArea.KeyPress
-        Dim DecimalSeparator As String = Application.CurrentCulture.NumberFormat.NumberDecimalSeparator
-        e.Handled = Not (Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = 8 Or (e.KeyChar = DecimalSeparator And sender.Text.IndexOf(DecimalSeparator) = -1))
+    'Private Sub txtFarmArea_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtFarmArea.KeyPress
+    '    Dim DecimalSeparator As String = Application.CurrentCulture.NumberFormat.NumberDecimalSeparator
+    '    e.Handled = Not (Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = 8 Or (e.KeyChar = DecimalSeparator And sender.Text.IndexOf(DecimalSeparator) = -1))
 
-    End Sub
+    'End Sub
 
     'BUTTON NEXT/PREVIOUS
+
     Private Sub btnNext1_Click(sender As Object, e As EventArgs) Handles btnNext1.Click
         TabControl1.SelectedTab = TabPage2
         Button3.BackColor = Color.FromArgb(26, 188, 156)
@@ -402,6 +403,7 @@
         Button2.BackColor = Color.FromArgb(26, 188, 156)
         Button3.BackColor = Color.FromArgb(46, 204, 113)
         Button4.BackColor = Color.FromArgb(46, 204, 113)
+        Button5.BackColor = Color.FromArgb(46, 204, 113)
     End Sub
 
     Private Sub btnNext2_Click(sender As Object, e As EventArgs) Handles btnNext2.Click
@@ -409,17 +411,33 @@
         Button4.BackColor = Color.FromArgb(26, 188, 156)
         Button3.BackColor = Color.FromArgb(46, 204, 113)
         Button2.BackColor = Color.FromArgb(46, 204, 113)
+        Button5.BackColor = Color.FromArgb(46, 204, 113)
     End Sub
 
-    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        Me.Close()
-    End Sub
+
 
     Private Sub btnPrevious2_Click(sender As Object, e As EventArgs) Handles btnPrevious2.Click
         TabControl1.SelectedTab = TabPage2
         Button3.BackColor = Color.FromArgb(26, 188, 156)
         Button4.BackColor = Color.FromArgb(46, 204, 113)
         Button2.BackColor = Color.FromArgb(46, 204, 113)
+        Button5.BackColor = Color.FromArgb(46, 204, 113)
+    End Sub
+
+    Private Sub btnNext3_Click(sender As Object, e As EventArgs) Handles btnNext3.Click
+        TabControl1.SelectedTab = TabPage4
+        Button3.BackColor = Color.FromArgb(46, 204, 113)
+        Button5.BackColor = Color.FromArgb(26, 188, 156)
+        Button4.BackColor = Color.FromArgb(46, 204, 113)
+        Button2.BackColor = Color.FromArgb(46, 204, 113)
+    End Sub
+
+    Private Sub btnPrevious3_Click(sender As Object, e As EventArgs) Handles btnPrevious3.Click
+        TabControl1.SelectedTab = TabPage3
+        Button4.BackColor = Color.FromArgb(26, 188, 156)
+        Button3.BackColor = Color.FromArgb(46, 204, 113)
+        Button2.BackColor = Color.FromArgb(46, 204, 113)
+        Button5.BackColor = Color.FromArgb(46, 204, 113)
     End Sub
 
     'INSERT FARM PROFILE
@@ -507,387 +525,388 @@
     End Sub
 
     'COMMODITIES KEY PRESS NUMBER ONLY 
-    Private Sub txtRice_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRice.KeyPress
-        Dim DecimalSeparator As String = Application.CurrentCulture.NumberFormat.NumberDecimalSeparator
-        e.Handled = Not (Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = 8 Or (e.KeyChar = DecimalSeparator And sender.Text.IndexOf(DecimalSeparator) = -1))
-    End Sub
+    'Private Sub txtRice_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRice.KeyPress
+    '    Dim DecimalSeparator As String = Application.CurrentCulture.NumberFormat.NumberDecimalSeparator
+    '    e.Handled = Not (Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = 8 Or (e.KeyChar = DecimalSeparator And sender.Text.IndexOf(DecimalSeparator) = -1))
+    'End Sub
 
-    Private Sub txtCorn_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorn.KeyPress
-        Dim DecimalSeparator As String = Application.CurrentCulture.NumberFormat.NumberDecimalSeparator
-        e.Handled = Not (Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = 8 Or (e.KeyChar = DecimalSeparator And sender.Text.IndexOf(DecimalSeparator) = -1))
-    End Sub
+    'Private Sub txtCorn_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorn.KeyPress
+    '    Dim DecimalSeparator As String = Application.CurrentCulture.NumberFormat.NumberDecimalSeparator
+    '    e.Handled = Not (Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = 8 Or (e.KeyChar = DecimalSeparator And sender.Text.IndexOf(DecimalSeparator) = -1))
+    'End Sub
 
-    Private Sub txtCoconut_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCoconut.KeyPress
-        Dim DecimalSeparator As String = Application.CurrentCulture.NumberFormat.NumberDecimalSeparator
-        e.Handled = Not (Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = 8 Or (e.KeyChar = DecimalSeparator And sender.Text.IndexOf(DecimalSeparator) = -1))
-    End Sub
+    'Private Sub txtCoconut_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCoconut.KeyPress
+    '    Dim DecimalSeparator As String = Application.CurrentCulture.NumberFormat.NumberDecimalSeparator
+    '    e.Handled = Not (Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = 8 Or (e.KeyChar = DecimalSeparator And sender.Text.IndexOf(DecimalSeparator) = -1))
+    'End Sub
 
-    Private Sub txtVegetables_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtVegetables.KeyPress
-        Dim DecimalSeparator As String = Application.CurrentCulture.NumberFormat.NumberDecimalSeparator
-        e.Handled = Not (Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = 8 Or (e.KeyChar = DecimalSeparator And sender.Text.IndexOf(DecimalSeparator) = -1))
-    End Sub
+    'Private Sub txtVegetables_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtVegetables.KeyPress
+    '    Dim DecimalSeparator As String = Application.CurrentCulture.NumberFormat.NumberDecimalSeparator
+    '    e.Handled = Not (Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = 8 Or (e.KeyChar = DecimalSeparator And sender.Text.IndexOf(DecimalSeparator) = -1))
+    'End Sub
 
-    Private Sub txtFruits_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtFruits.KeyPress
-        Dim DecimalSeparator As String = Application.CurrentCulture.NumberFormat.NumberDecimalSeparator
-        e.Handled = Not (Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = 8 Or (e.KeyChar = DecimalSeparator And sender.Text.IndexOf(DecimalSeparator) = -1))
-    End Sub
+    'Private Sub txtFruits_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtFruits.KeyPress
+    '    Dim DecimalSeparator As String = Application.CurrentCulture.NumberFormat.NumberDecimalSeparator
+    '    e.Handled = Not (Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = 8 Or (e.KeyChar = DecimalSeparator And sender.Text.IndexOf(DecimalSeparator) = -1))
+    'End Sub
 
-    Private Sub txtRootCrops_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRootCrops.KeyPress
-        Dim DecimalSeparator As String = Application.CurrentCulture.NumberFormat.NumberDecimalSeparator
-        e.Handled = Not (Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = 8 Or (e.KeyChar = DecimalSeparator And sender.Text.IndexOf(DecimalSeparator) = -1))
-    End Sub
+    'Private Sub txtRootCrops_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRootCrops.KeyPress
+    '    Dim DecimalSeparator As String = Application.CurrentCulture.NumberFormat.NumberDecimalSeparator
+    '    e.Handled = Not (Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = 8 Or (e.KeyChar = DecimalSeparator And sender.Text.IndexOf(DecimalSeparator) = -1))
+    'End Sub
 
-    Private Sub txtCarabao_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCarabao.KeyPress
-        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
-            e.Handled = True
-        End If
-    End Sub
+    'Private Sub txtCarabao_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCarabao.KeyPress
+    '    If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+    '        e.Handled = True
+    '    End If
+    'End Sub
 
-    Private Sub txtCattle_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCattle.KeyPress
-        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
-            e.Handled = True
-        End If
-    End Sub
+    'Private Sub txtCattle_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCattle.KeyPress
+    '    If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+    '        e.Handled = True
+    '    End If
+    'End Sub
 
-    Private Sub txtSwine_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtSwine.KeyPress
-        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
-            e.Handled = True
-        End If
-    End Sub
+    'Private Sub txtSwine_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtSwine.KeyPress
+    '    If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+    '        e.Handled = True
+    '    End If
+    'End Sub
 
-    Private Sub txtGoat_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtGoat.KeyPress
-        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
-            e.Handled = True
-        End If
-    End Sub
+    'Private Sub txtGoat_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtGoat.KeyPress
+    '    If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+    '        e.Handled = True
+    '    End If
+    'End Sub
 
-    Private Sub txtChicken_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtChicken.KeyPress
-        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
-            e.Handled = True
-        End If
-    End Sub
+    'Private Sub txtChicken_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtChicken.KeyPress
+    '    If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+    '        e.Handled = True
+    '    End If
+    'End Sub
 
-    Private Sub txtDuck_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDuck.KeyPress
-        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
-            e.Handled = True
-        End If
-    End Sub
+    'Private Sub txtDuck_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDuck.KeyPress
+    '    If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+    '        e.Handled = True
+    '    End If
+    'End Sub
 
-    Private Sub txtTurkey_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTurkey.KeyPress
-        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
-            e.Handled = True
-        End If
-    End Sub
+    'Private Sub txtTurkey_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTurkey.KeyPress
+    '    If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+    '        e.Handled = True
+    '    End If
+    'End Sub
 
-    Private Sub txtGoose_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtGoose.KeyPress
-        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
-            e.Handled = True
-        End If
-    End Sub
+    'Private Sub txtGoose_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtGoose.KeyPress
+    '    If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+    '        e.Handled = True
+    '    End If
+    'End Sub
 
-    Private Sub txtDog_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDog.KeyPress
-        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
-            e.Handled = True
-        End If
-    End Sub
+    'Private Sub txtDog_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDog.KeyPress
+    '    If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+    '        e.Handled = True
+    '    End If
+    'End Sub
 
-    Private Sub txtCat_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCat.KeyPress
-        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
-            e.Handled = True
-        End If
-    End Sub
+    'Private Sub txtCat_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCat.KeyPress
+    '    If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+    '        e.Handled = True
+    '    End If
+    'End Sub
 
 
     'COMMODITIES CHECKBOX INSERT
-    Sub CHECKBOX_INSERT()
-        If chkRice.Checked = True Then
-            CROP_LANDAREA = txtRice.Text
-            CROP_CATEGORIES = "Rice"
-            CROP_TYPE = "Rice"
-            CROP_ID = RICEID
-            MEM_ID = GlobalId
-            Success = Checkbox_Crops_function(CROP_LANDAREA, CROP_CATEGORIES, CROP_TYPE, CROP_ID, MEM_ID)
-        End If
+    'Sub CHECKBOX_INSERT()
+    '    If chkRice.Checked = True Then
+    '        CROP_LANDAREA = txtRice.Text
+    '        CROP_CATEGORIES = "Rice"
+    '        CROP_TYPE = "Rice"
+    '        CROP_ID = RICEID
+    '        MEM_ID = GlobalId
+    '        Success = Checkbox_Crops_function(CROP_LANDAREA, CROP_CATEGORIES, CROP_TYPE, CROP_ID, MEM_ID)
+    '    End If
 
-        If chkCorn.Checked = True Then
-            CROP_LANDAREA = txtCorn.Text
-            CROP_CATEGORIES = "Corn"
-            CROP_TYPE = "Corn"
-            CROP_ID = CORNID
-            MEM_ID = GlobalId
-            Success = Checkbox_Crops_function(CROP_LANDAREA, CROP_CATEGORIES, CROP_TYPE, CROP_ID, MEM_ID)
-        End If
+    '    If chkCorn.Checked = True Then
+    '        CROP_LANDAREA = txtCorn.Text
+    '        CROP_CATEGORIES = "Corn"
+    '        CROP_TYPE = "Corn"
+    '        CROP_ID = CORNID
+    '        MEM_ID = GlobalId
+    '        Success = Checkbox_Crops_function(CROP_LANDAREA, CROP_CATEGORIES, CROP_TYPE, CROP_ID, MEM_ID)
+    '    End If
 
-        If chkCoconut.Checked = True Then
-            CROP_LANDAREA = txtCoconut.Text
-            CROP_CATEGORIES = "Coconut"
-            CROP_TYPE = "Coconut"
-            CROP_ID = COCONUTID
-            MEM_ID = GlobalId
-            Success = Checkbox_Crops_function(CROP_LANDAREA, CROP_CATEGORIES, CROP_TYPE, CROP_ID, MEM_ID)
-        End If
+    '    If chkCoconut.Checked = True Then
+    '        CROP_LANDAREA = txtCoconut.Text
+    '        CROP_CATEGORIES = "Coconut"
+    '        CROP_TYPE = "Coconut"
+    '        CROP_ID = COCONUTID
+    '        MEM_ID = GlobalId
+    '        Success = Checkbox_Crops_function(CROP_LANDAREA, CROP_CATEGORIES, CROP_TYPE, CROP_ID, MEM_ID)
+    '    End If
 
-        If chkVegetables.Checked = True Then
-            CROP_LANDAREA = txtVegetables.Text
-            CROP_CATEGORIES = "HVCDP"
-            CROP_TYPE = "Vegetables"
-            CROP_ID = VEGETABLESID
-            MEM_ID = GlobalId
-            Success = Checkbox_Crops_function(CROP_LANDAREA, CROP_CATEGORIES, CROP_TYPE, CROP_ID, MEM_ID)
-        End If
+    '    If chkVegetables.Checked = True Then
+    '        CROP_LANDAREA = txtVegetables.Text
+    '        CROP_CATEGORIES = "HVCDP"
+    '        CROP_TYPE = "Vegetables"
+    '        CROP_ID = VEGETABLESID
+    '        MEM_ID = GlobalId
+    '        Success = Checkbox_Crops_function(CROP_LANDAREA, CROP_CATEGORIES, CROP_TYPE, CROP_ID, MEM_ID)
+    '    End If
 
-        If chkFruits.Checked = True Then
-            CROP_LANDAREA = txtFruits.Text
-            CROP_CATEGORIES = "HVCDP"
-            CROP_TYPE = "Fruits"
-            CROP_ID = FRUITSID
-            MEM_ID = GlobalId
-            Success = Checkbox_Crops_function(CROP_LANDAREA, CROP_CATEGORIES, CROP_TYPE, CROP_ID, MEM_ID)
-        End If
-        If chkRootCrops.Checked = True Then
-            CROP_LANDAREA = txtRootCrops.Text
-            CROP_CATEGORIES = "HVCDP"
-            CROP_TYPE = "Root Crops"
-            CROP_ID = ROOTCROPSID
-            MEM_ID = GlobalId
-            Success = Checkbox_Crops_function(CROP_LANDAREA, CROP_CATEGORIES, CROP_TYPE, CROP_ID, MEM_ID)
-        End If
+    '    If chkFruits.Checked = True Then
+    '        CROP_LANDAREA = txtFruits.Text
+    '        CROP_CATEGORIES = "HVCDP"
+    '        CROP_TYPE = "Fruits"
+    '        CROP_ID = FRUITSID
+    '        MEM_ID = GlobalId
+    '        Success = Checkbox_Crops_function(CROP_LANDAREA, CROP_CATEGORIES, CROP_TYPE, CROP_ID, MEM_ID)
+    '    End If
+    '    If chkRootCrops.Checked = True Then
+    '        CROP_LANDAREA = txtRootCrops.Text
+    '        CROP_CATEGORIES = "HVCDP"
+    '        CROP_TYPE = "Root Crops"
+    '        CROP_ID = ROOTCROPSID
+    '        MEM_ID = GlobalId
+    '        Success = Checkbox_Crops_function(CROP_LANDAREA, CROP_CATEGORIES, CROP_TYPE, CROP_ID, MEM_ID)
+    '    End If
 
-        If chkCarabao.Checked = True Then
-            ANIMAL_QTY = txtCarabao.Text
-            ANIMAL_CATEGORIES = "Livestock"
-            ANIMAL_TYPE = "Carabao"
-            ANIMAL_ID = CARABAOID
-            MEM_ID = GlobalId
-            Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
-        End If
+    '    If chkCarabao.Checked = True Then
+    '        ANIMAL_QTY = txtCarabao.Text
+    '        ANIMAL_CATEGORIES = "Livestock"
+    '        ANIMAL_TYPE = "Carabao"
+    '        ANIMAL_ID = CARABAOID
+    '        MEM_ID = GlobalId
+    '        Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
+    '    End If
 
-        If chkCattle.Checked = True Then
-            ANIMAL_QTY = txtCattle.Text
-            ANIMAL_CATEGORIES = "Livestock"
-            ANIMAL_TYPE = "Cattle"
-            ANIMAL_ID = CATTLEID
-            MEM_ID = GlobalId
-            Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
-        End If
+    '    If chkCattle.Checked = True Then
+    '        ANIMAL_QTY = txtCattle.Text
+    '        ANIMAL_CATEGORIES = "Livestock"
+    '        ANIMAL_TYPE = "Cattle"
+    '        ANIMAL_ID = CATTLEID
+    '        MEM_ID = GlobalId
+    '        Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
+    '    End If
 
-        If chkSwine.Checked = True Then
-            ANIMAL_QTY = txtSwine.Text
-            ANIMAL_CATEGORIES = "Livestock"
-            ANIMAL_TYPE = "Swine"
-            ANIMAL_ID = SWINEID
-            MEM_ID = GlobalId
-            Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
-        End If
+    '    If chkSwine.Checked = True Then
+    '        ANIMAL_QTY = txtSwine.Text
+    '        ANIMAL_CATEGORIES = "Livestock"
+    '        ANIMAL_TYPE = "Swine"
+    '        ANIMAL_ID = SWINEID
+    '        MEM_ID = GlobalId
+    '        Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
+    '    End If
 
-        If chkGoat.Checked = True Then
-            ANIMAL_QTY = txtGoat.Text
-            ANIMAL_CATEGORIES = "Livestock"
-            ANIMAL_TYPE = "Goat"
-            ANIMAL_ID = GOATID
-            MEM_ID = GlobalId
-            Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
-        End If
+    '    If chkGoat.Checked = True Then
+    '        ANIMAL_QTY = txtGoat.Text
+    '        ANIMAL_CATEGORIES = "Livestock"
+    '        ANIMAL_TYPE = "Goat"
+    '        ANIMAL_ID = GOATID
+    '        MEM_ID = GlobalId
+    '        Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
+    '    End If
 
-        If chkChicken.Checked = True Then
-            ANIMAL_QTY = txtChicken.Text
-            ANIMAL_CATEGORIES = "Poultry"
-            ANIMAL_TYPE = "Chicken"
-            ANIMAL_ID = CHICKENID
-            MEM_ID = GlobalId
-            Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
-        End If
+    '    If chkChicken.Checked = True Then
+    '        ANIMAL_QTY = txtChicken.Text
+    '        ANIMAL_CATEGORIES = "Poultry"
+    '        ANIMAL_TYPE = "Chicken"
+    '        ANIMAL_ID = CHICKENID
+    '        MEM_ID = GlobalId
+    '        Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
+    '    End If
 
-        If chkDuck.Checked = True Then
-            ANIMAL_QTY = txtDuck.Text
-            ANIMAL_CATEGORIES = "Poultry"
-            ANIMAL_TYPE = "Duck"
-            ANIMAL_ID = DUCKID
-            MEM_ID = GlobalId
-            Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
-        End If
+    '    If chkDuck.Checked = True Then
+    '        ANIMAL_QTY = txtDuck.Text
+    '        ANIMAL_CATEGORIES = "Poultry"
+    '        ANIMAL_TYPE = "Duck"
+    '        ANIMAL_ID = DUCKID
+    '        MEM_ID = GlobalId
+    '        Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
+    '    End If
 
-        If chkTurkey.Checked = True Then
-            ANIMAL_QTY = txtTurkey.Text
-            ANIMAL_CATEGORIES = "Poultryy"
-            ANIMAL_TYPE = "Turkey"
-            ANIMAL_ID = TURKEYID
-            MEM_ID = GlobalId
-            Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
-        End If
+    '    If chkTurkey.Checked = True Then
+    '        ANIMAL_QTY = txtTurkey.Text
+    '        ANIMAL_CATEGORIES = "Poultryy"
+    '        ANIMAL_TYPE = "Turkey"
+    '        ANIMAL_ID = TURKEYID
+    '        MEM_ID = GlobalId
+    '        Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
+    '    End If
 
-        If chkGoose.Checked = True Then
-            ANIMAL_QTY = txtGoose.Text
-            ANIMAL_CATEGORIES = "Poultry"
-            ANIMAL_TYPE = "Goose"
-            ANIMAL_ID = GOOSEID
-            MEM_ID = GlobalId
-            Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
-        End If
+    '    If chkGoose.Checked = True Then
+    '        ANIMAL_QTY = txtGoose.Text
+    '        ANIMAL_CATEGORIES = "Poultry"
+    '        ANIMAL_TYPE = "Goose"
+    '        ANIMAL_ID = GOOSEID
+    '        MEM_ID = GlobalId
+    '        Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
+    '    End If
 
-        If chkDog.Checked = True Then
-            ANIMAL_QTY = txtDog.Text
-            ANIMAL_CATEGORIES = "Other Animals"
-            ANIMAL_TYPE = "Dog"
-            ANIMAL_ID = DOGID
-            MEM_ID = GlobalId
-            Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
-        End If
+    '    If chkDog.Checked = True Then
+    '        ANIMAL_QTY = txtDog.Text
+    '        ANIMAL_CATEGORIES = "Other Animals"
+    '        ANIMAL_TYPE = "Dog"
+    '        ANIMAL_ID = DOGID
+    '        MEM_ID = GlobalId
+    '        Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
+    '    End If
 
-        If chkCat.Checked = True Then
-            ANIMAL_QTY = txtCat.Text
-            ANIMAL_CATEGORIES = "Other Animals"
-            ANIMAL_TYPE = "Cat"
-            ANIMAL_ID = CATTLEID
-            MEM_ID = GlobalId
-            Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
-        End If
+    '    If chkCat.Checked = True Then
+    '        ANIMAL_QTY = txtCat.Text
+    '        ANIMAL_CATEGORIES = "Other Animals"
+    '        ANIMAL_TYPE = "Cat"
+    '        ANIMAL_ID = CATTLEID
+    '        MEM_ID = GlobalId
+    '        Success = Checkbox_Animals_function(ANIMAL_QTY, ANIMAL_CATEGORIES, ANIMAL_TYPE, ANIMAL_ID, MEM_ID)
+    '    End If
 
-    End Sub
+    'End Sub
 
 
     'FUNCTIONS
-    Function Checkbox_Crops_function(ByVal crop_landarea As String, ByVal crop_categories As String, ByVal crop_type As String, ByVal crop_id As Integer, ByVal mem_id As Integer) As Boolean
-        MAXXID()
-        openCon()
-        Try
-            If btnSaveUpdate.Text = "Save" Then
-                cmd.Connection = con
-                cmd.CommandText = "INSERT INTO `crops`(`crops_type`, `crops_cat`, `crops_landarea`, `mem_id`) VALUES 
-                                    (@CROP_TYPE,@CROP_CAT,@CROP_AREA,@MEM_ID)"
-                With cmd
-                    .Parameters.AddWithValue("@CROP_TYPE", crop_type)
-                    .Parameters.AddWithValue("@CROP_CAT", crop_categories)
-                    .Parameters.AddWithValue("@CROP_AREA", crop_landarea)
-                    .Parameters.AddWithValue("@MEM_ID", MAXID)
-                End With
-                result = cmd.ExecuteNonQuery()
-                If result > 0 Then
-                    Return True
-                Else
-                    Return False
-                End If
+    'Function Checkbox_Crops_function(ByVal crop_landarea As String, ByVal crop_categories As String, ByVal crop_type As String, ByVal crop_id As Integer, ByVal mem_id As Integer) As Boolean
+    '    MAXXID()
+    '    openCon()
+    '    Try
+    '        If btnSaveUpdate.Text = "Save" Then
+    '            cmd.Connection = con
+    '            cmd.CommandText = "INSERT INTO `crops`(`crops_type`, `crops_cat`, `crops_landarea`, `mem_id`) VALUES 
+    '                                (@CROP_TYPE,@CROP_CAT,@CROP_AREA,@MEM_ID)"
+    '            With cmd
+    '                .Parameters.AddWithValue("@CROP_TYPE", crop_type)
+    '                .Parameters.AddWithValue("@CROP_CAT", crop_categories)
+    '                .Parameters.AddWithValue("@CROP_AREA", crop_landarea)
+    '                .Parameters.AddWithValue("@MEM_ID", MAXID)
+    '            End With
+    '            result = cmd.ExecuteNonQuery()
+    '            If result > 0 Then
+    '                Return True
+    '            Else
+    '                Return False
+    '            End If
 
-            ElseIf btnSaveUpdate.Text = "Update" Then
-                If crop_id = Nothing Or crop_id = 0 Then
-                    cmd.Connection = con
-                    cmd.CommandText = "INSERT INTO `crops`(`crops_type`, `crops_cat`, `crops_landarea`, `mem_id`) VALUES 
-                                    (@CROP_TYPE,@CROP_CAT,@CROP_AREA,@MEM_ID)"
-                    With cmd
-                        .Parameters.AddWithValue("@CROP_TYPE", crop_type)
-                        .Parameters.AddWithValue("@CROP_CAT", crop_categories)
-                        .Parameters.AddWithValue("@CROP_AREA", crop_landarea)
-                        .Parameters.AddWithValue("@MEM_ID", mem_id)
-                    End With
-                    result = cmd.ExecuteNonQuery()
-                    If result > 0 Then
-                        Return True
-                    Else
-                        Return False
-                    End If
-                Else
-                    cmd.Connection = con
-                    cmd.CommandText = "UPDATE `crops` SET `crops_type`= @CROP_TYPE,`crops_cat`= @CROP_CAT,`crops_landarea`= @CROP_AREA 
-                                    WHERE `crops`.`crops_id` = @CROP_ID AND `crops`.`mem_id` = @MEM_ID"
-                    With cmd
-                        .Parameters.AddWithValue("@CROP_TYPE", crop_type)
-                        .Parameters.AddWithValue("@CROP_CAT", crop_categories)
-                        .Parameters.AddWithValue("@CROP_AREA", crop_landarea)
-                        .Parameters.AddWithValue("@MEM_ID", mem_id)
-                        .Parameters.AddWithValue("@CROP_ID", crop_id)
+    '        ElseIf btnSaveUpdate.Text = "Update" Then
+    '            If crop_id = Nothing Or crop_id = 0 Then
+    '                cmd.Connection = con
+    '                cmd.CommandText = "INSERT INTO `crops`(`crops_type`, `crops_cat`, `crops_landarea`, `mem_id`) VALUES 
+    '                                (@CROP_TYPE,@CROP_CAT,@CROP_AREA,@MEM_ID)"
+    '                With cmd
+    '                    .Parameters.AddWithValue("@CROP_TYPE", crop_type)
+    '                    .Parameters.AddWithValue("@CROP_CAT", crop_categories)
+    '                    .Parameters.AddWithValue("@CROP_AREA", crop_landarea)
+    '                    .Parameters.AddWithValue("@MEM_ID", mem_id)
+    '                End With
+    '                result = cmd.ExecuteNonQuery()
+    '                If result > 0 Then
+    '                    Return True
+    '                Else
+    '                    Return False
+    '                End If
+    '            Else
+    '                cmd.Connection = con
+    '                cmd.CommandText = "UPDATE `crops` SET `crops_type`= @CROP_TYPE,`crops_cat`= @CROP_CAT,`crops_landarea`= @CROP_AREA 
+    '                                WHERE `crops`.`crops_id` = @CROP_ID AND `crops`.`mem_id` = @MEM_ID"
+    '                With cmd
+    '                    .Parameters.AddWithValue("@CROP_TYPE", crop_type)
+    '                    .Parameters.AddWithValue("@CROP_CAT", crop_categories)
+    '                    .Parameters.AddWithValue("@CROP_AREA", crop_landarea)
+    '                    .Parameters.AddWithValue("@MEM_ID", mem_id)
+    '                    .Parameters.AddWithValue("@CROP_ID", crop_id)
 
-                    End With
-                    result = cmd.ExecuteNonQuery()
-                    If result > 0 Then
-                        Return True
-                    Else
-                        Return False
-                    End If
-                End If
+    '                End With
+    '                result = cmd.ExecuteNonQuery()
+    '                If result > 0 Then
+    '                    Return True
+    '                Else
+    '                    Return False
+    '                End If
+    '            End If
 
-            End If
-
-
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-        Finally
-            cmd.Parameters.Clear()
-            cmd.Dispose()
-            con.Close()
-        End Try
-    End Function
-
-    Function Checkbox_Animals_function(ByVal animal_qty As String, ByVal animal_cat As String, ByVal animal_type As String, ByVal animal_id As Integer, ByVal mem_id As Integer) As Boolean
-        MAXXID()
-        openCon()
-        Try
-            If btnSaveUpdate.Text = "Save" Then
-                cmd.Connection = con
-                cmd.CommandText = "INSERT INTO `animal`( `animal_type`, `animal_cat`, `animal_no`, `mem_id`) 
-                                VALUES (@ANIMAL_TYPE, @ANIMAL_CAT, @ANIMAL_QTY,@MEM_ID)"
-                With cmd
-                    .Parameters.AddWithValue("@ANIMAL_TYPE", animal_type)
-                    .Parameters.AddWithValue("@ANIMAL_CAT", animal_cat)
-                    .Parameters.AddWithValue("@ANIMAL_QTY", animal_qty)
-                    .Parameters.AddWithValue("@MEM_ID", MAXID)
-                End With
-                result = cmd.ExecuteNonQuery()
-                If result > 0 Then
-                    Return True
-                Else
-                    Return False
-                End If
-            ElseIf btnSaveUpdate.Text = "Update" Then
-                If animal_id = Nothing Or animal_id = 0 Then
-                    cmd.Connection = con
-                    cmd.CommandText = "INSERT INTO `animal`( `animal_type`, `animal_cat`, `animal_no`, `mem_id`) 
-                                VALUES (@ANIMAL_TYPE, @ANIMAL_CAT, @ANIMAL_QTY,@MEM_ID)"
-                    With cmd
-                        .Parameters.AddWithValue("@ANIMAL_TYPE", animal_type)
-                        .Parameters.AddWithValue("@ANIMAL_CAT", animal_cat)
-                        .Parameters.AddWithValue("@ANIMAL_QTY", animal_qty)
-                        .Parameters.AddWithValue("@MEM_ID", mem_id)
-                    End With
-                    result = cmd.ExecuteNonQuery()
-                    If result > 0 Then
-                        Return True
-                    Else
-                        Return False
-                    End If
-                Else
-                    cmd.Connection = con
-                    cmd.CommandText = "UPDATE `animal` SET `animal_type`= @ANIMAL_TYPE,`animal_cat`= @ANIMAL_CAT, `animal_no`= @ANIMAL_QTY 
-                                    WHERE `animal`.`animal_id` = @ANIMAL_ID AND `animal`.`mem_id` = @MEM_ID"
-                    With cmd
-                        .Parameters.AddWithValue("@ANIMAL_TYPE", animal_type)
-                        .Parameters.AddWithValue("@ANIMAL_CAT", animal_cat)
-                        .Parameters.AddWithValue("@ANIMAL_QTY", animal_qty)
-                        .Parameters.AddWithValue("@MEM_ID", mem_id)
-                        .Parameters.AddWithValue("@ANIMAL_ID", animal_id)
-                    End With
-                    result = cmd.ExecuteNonQuery()
-                    If result > 0 Then
-                        Return True
-                    Else
-                        Return False
-                    End If
-                End If
+    '        End If
 
 
-            End If
+    '    Catch ex As Exception
+    '        MsgBox(ex.ToString)
+    '    Finally
+    '        cmd.Parameters.Clear()
+    '        cmd.Dispose()
+    '        con.Close()
+    '    End Try
+    'End Function
+
+    'Function Checkbox_Animals_function(ByVal animal_qty As String, ByVal animal_cat As String, ByVal animal_type As String, ByVal animal_id As Integer, ByVal mem_id As Integer) As Boolean
+    '    MAXXID()
+    '    openCon()
+    '    Try
+    '        If btnSaveUpdate.Text = "Save" Then
+    '            cmd.Connection = con
+    '            cmd.CommandText = "INSERT INTO `animal`( `animal_type`, `animal_cat`, `animal_no`, `mem_id`) 
+    '                            VALUES (@ANIMAL_TYPE, @ANIMAL_CAT, @ANIMAL_QTY,@MEM_ID)"
+    '            With cmd
+    '                .Parameters.AddWithValue("@ANIMAL_TYPE", animal_type)
+    '                .Parameters.AddWithValue("@ANIMAL_CAT", animal_cat)
+    '                .Parameters.AddWithValue("@ANIMAL_QTY", animal_qty)
+    '                .Parameters.AddWithValue("@MEM_ID", MAXID)
+    '            End With
+    '            result = cmd.ExecuteNonQuery()
+    '            If result > 0 Then
+    '                Return True
+    '            Else
+    '                Return False
+    '            End If
+    '        ElseIf btnSaveUpdate.Text = "Update" Then
+    '            If animal_id = Nothing Or animal_id = 0 Then
+    '                cmd.Connection = con
+    '                cmd.CommandText = "INSERT INTO `animal`( `animal_type`, `animal_cat`, `animal_no`, `mem_id`) 
+    '                            VALUES (@ANIMAL_TYPE, @ANIMAL_CAT, @ANIMAL_QTY,@MEM_ID)"
+    '                With cmd
+    '                    .Parameters.AddWithValue("@ANIMAL_TYPE", animal_type)
+    '                    .Parameters.AddWithValue("@ANIMAL_CAT", animal_cat)
+    '                    .Parameters.AddWithValue("@ANIMAL_QTY", animal_qty)
+    '                    .Parameters.AddWithValue("@MEM_ID", mem_id)
+    '                End With
+    '                result = cmd.ExecuteNonQuery()
+    '                If result > 0 Then
+    '                    Return True
+    '                Else
+    '                    Return False
+    '                End If
+    '            Else
+    '                cmd.Connection = con
+    '                cmd.CommandText = "UPDATE `animal` SET `animal_type`= @ANIMAL_TYPE,`animal_cat`= @ANIMAL_CAT, `animal_no`= @ANIMAL_QTY 
+    '                                WHERE `animal`.`animal_id` = @ANIMAL_ID AND `animal`.`mem_id` = @MEM_ID"
+    '                With cmd
+    '                    .Parameters.AddWithValue("@ANIMAL_TYPE", animal_type)
+    '                    .Parameters.AddWithValue("@ANIMAL_CAT", animal_cat)
+    '                    .Parameters.AddWithValue("@ANIMAL_QTY", animal_qty)
+    '                    .Parameters.AddWithValue("@MEM_ID", mem_id)
+    '                    .Parameters.AddWithValue("@ANIMAL_ID", animal_id)
+    '                End With
+    '                result = cmd.ExecuteNonQuery()
+    '                If result > 0 Then
+    '                    Return True
+    '                Else
+    '                    Return False
+    '                End If
+    '            End If
 
 
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-        Finally
-            cmd.Parameters.Clear()
-            cmd.Dispose()
-            con.Close()
-        End Try
-    End Function
+    '        End If
+
+
+    '    Catch ex As Exception
+    '        MsgBox(ex.ToString)
+    '    Finally
+    '        cmd.Parameters.Clear()
+    '        cmd.Dispose()
+    '        con.Close()
+    '    End Try
+    'End Function
 
 
     'LOADTABLE
+
     Sub loadTable()
         openCon()
         Try
@@ -928,6 +947,8 @@
         cbTypeOwnership.Text = ""
         radFemale.Checked = False
         radMale.Checked = False
+        cmbAnimalCat.Text = ""
+        cmbCropCat.Text = ""
 
     End Sub
 
@@ -940,5 +961,112 @@
         Next cc
     End Sub
 
+    'TAB CROPS
+    Private Sub btnAddCrops_Click(sender As Object, e As EventArgs) Handles btnAddCrops.Click
+        Dim a As String = txtCropType.Text
+        Dim b As String = cmbCropCat.SelectedItem
+        Dim c As String = txtLandArea.Text
 
+        dgrdcrop.Rows.Add(a, b, c)
+
+        txtCropType.Clear()
+        cmbCropCat.Text = ""
+        txtLandArea.Clear()
+
+    End Sub
+
+    Private Sub txtLandArea_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtLandArea.KeyPress
+        Dim DecimalSeparator As String = Application.CurrentCulture.NumberFormat.NumberDecimalSeparator
+        e.Handled = Not (Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = 8 Or (e.KeyChar = DecimalSeparator And sender.Text.IndexOf(DecimalSeparator) = -1))
+    End Sub
+
+    Private Sub btnRemoveCrops_Click(sender As Object, e As EventArgs) Handles btnRemoveCrops.Click
+        For Each row As DataGridViewRow In dgrdcrop.SelectedRows
+            dgrdcrop.Rows.Remove(row)
+        Next
+        txtCropType.Clear()
+        cmbCropCat.Text = ""
+        txtLandArea.Clear()
+    End Sub
+
+    Private Sub dgrdcrop_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgrdcrop.CellMouseClick
+        If e.RowIndex >= 0 Then
+            index = e.RowIndex
+            Dim row As DataGridViewRow = dgrdcrop.Rows(index)
+            txtCropType.Text = row.Cells(0).Value.ToString
+            cmbCropCat.Text = row.Cells(1).Value.ToString
+            txtLandArea.Text = row.Cells(2).Value.ToString
+        End If
+    End Sub
+
+    Private Sub btnEditCrops_Click(sender As Object, e As EventArgs) Handles btnEditCrops.Click
+
+        Dim newDataRow As DataGridViewRow
+
+        newDataRow = dgrdcrop.Rows(index)
+
+        newDataRow.Cells(0).Value = txtCropType.Text
+        newDataRow.Cells(1).Value = cmbCropCat.Text
+        newDataRow.Cells(2).Value = txtLandArea.Text
+    End Sub
+
+
+
+    'TAB ANIMAL
+    Private Sub txtNumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNumber.KeyPress
+        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub btnAddAnimal_Click(sender As Object, e As EventArgs) Handles btnAddAnimal.Click
+        Dim a As String = txtAnimalType.Text
+        Dim b As String = cmbAnimalCat.SelectedItem
+        Dim c As String = txtNumber.Text
+
+        dgrdanimal.Rows.Add(a, b, c)
+
+        txtAnimalType.Clear()
+        cmbAnimalCat.Text = ""
+        txtNumber.Clear()
+    End Sub
+
+    Private Sub btnEditAnimal_Click(sender As Object, e As EventArgs) Handles btnEditAnimal.Click
+        Dim newDataRow As DataGridViewRow
+
+        newDataRow = dgrdanimal.Rows(index)
+
+        newDataRow.Cells(0).Value = txtAnimalType.Text
+        newDataRow.Cells(1).Value = cmbAnimalCat.Text
+        newDataRow.Cells(2).Value = txtNumber.Text
+    End Sub
+
+    Private Sub dgrdanimal_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgrdanimal.CellMouseClick
+        If e.RowIndex >= 0 Then
+            index = e.RowIndex
+            Dim row As DataGridViewRow = dgrdanimal.Rows(index)
+            txtAnimalType.Text = row.Cells(0).Value.ToString
+            cmbAnimalCat.Text = row.Cells(1).Value.ToString
+            txtNumber.Text = row.Cells(2).Value.ToString
+        End If
+    End Sub
+
+    Private Sub btnRemoveAnimal_Click(sender As Object, e As EventArgs) Handles btnRemoveAnimal.Click
+        For Each row As DataGridViewRow In dgrdanimal.SelectedRows
+            dgrdanimal.Rows.Remove(row)
+        Next
+        txtAnimalType.Clear()
+        cmbAnimalCat.Text = ""
+        txtNumber.Clear()
+    End Sub
+
+    Private Sub btnSaveUpdate2_Click(sender As Object, e As EventArgs) Handles btnSaveUpdate2.Click
+
+    End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Me.Close()
+        ClearAll()
+        ClearTextBox(Me)
+    End Sub
 End Class

@@ -320,10 +320,10 @@ Partial Class frmMain
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.FRACIS.My.Resources.Resources.download
-        Me.PictureBox1.Location = New System.Drawing.Point(63, 42)
+        Me.PictureBox1.Image = Global.FRACIS.My.Resources.Resources.farmer_logo
+        Me.PictureBox1.Location = New System.Drawing.Point(29, 17)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(120, 120)
+        Me.PictureBox1.Size = New System.Drawing.Size(173, 171)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False

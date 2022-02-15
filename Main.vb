@@ -6,7 +6,7 @@
         pnlContainer.Controls.Add(frmDashboard)
         frmDashboard.Show()
         'mysql_connect()
-        
+        ' Color.FromArgb(26, 188, 156)
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
@@ -19,7 +19,7 @@
         frmDashboard.TopLevel = False
         pnlContainer.Controls.Add(frmDashboard)
         frmDashboard.Show()
-        btnDash.BackColor = Color.FromArgb(26, 188, 156)
+        btnDash.BackColor = Color.PaleTurquoise
         btnfarmers.BackColor = Color.FromArgb(46, 204, 113)
         btnCommo.BackColor = Color.FromArgb(46, 204, 113)
         btnMap.BackColor = Color.FromArgb(46, 204, 113)
@@ -34,7 +34,7 @@
         pnlContainer.Controls.Add(frmFarmers)
         frmFarmers.Show()
 
-        btnfarmers.BackColor = Color.FromArgb(26, 188, 156)
+        btnfarmers.BackColor = Color.PaleTurquoise
         btnDash.BackColor = Color.FromArgb(46, 204, 113)
         btnCommo.BackColor = Color.FromArgb(46, 204, 113)
         btnMap.BackColor = Color.FromArgb(46, 204, 113)
@@ -49,7 +49,7 @@
         pnlContainer.Controls.Add(frmCommo)
         frmCommo.Show()
 
-        btnCommo.BackColor = Color.FromArgb(26, 188, 156)
+        btnCommo.BackColor = Color.PaleTurquoise
         btnDash.BackColor = Color.FromArgb(46, 204, 113)
         btnfarmers.BackColor = Color.FromArgb(46, 204, 113)
         btnMap.BackColor = Color.FromArgb(46, 204, 113)
@@ -65,7 +65,7 @@
         frmMap.PicMap.Image = My.Resources.Map_of_Sipocot
         frmMap.pnlInfo.Visible = False
 
-        btnMap.BackColor = Color.FromArgb(26, 188, 156)
+        btnMap.BackColor = Color.PaleTurquoise
         btnDash.BackColor = Color.FromArgb(46, 204, 113)
         btnfarmers.BackColor = Color.FromArgb(46, 204, 113)
         btnCommo.BackColor = Color.FromArgb(46, 204, 113)
@@ -79,7 +79,7 @@
         pnlContainer.Controls.Add(frmDistributed)
         frmDistributed.Show()
 
-        btnDistributed.BackColor = Color.FromArgb(26, 188, 156)
+        btnDistributed.BackColor = Color.PaleTurquoise
         btnDash.BackColor = Color.FromArgb(46, 204, 113)
         btnfarmers.BackColor = Color.FromArgb(46, 204, 113)
         btnCommo.BackColor = Color.FromArgb(46, 204, 113)
@@ -98,7 +98,7 @@
         pnlContainer.Controls.Add(frmImport)
         frmImport.Show()
 
-        btnImports.BackColor = Color.FromArgb(26, 188, 156)
+        btnImports.BackColor = Color.PaleTurquoise
         btnDash.BackColor = Color.FromArgb(46, 204, 113)
         btnfarmers.BackColor = Color.FromArgb(46, 204, 113)
         btnCommo.BackColor = Color.FromArgb(46, 204, 113)

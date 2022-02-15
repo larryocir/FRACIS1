@@ -30,19 +30,20 @@ Partial Class frmDistrib
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.lblItems = New System.Windows.Forms.Label()
         Me.lblVenue = New System.Windows.Forms.Label()
         Me.dgrdmember = New System.Windows.Forms.DataGridView()
         Me.lblDate = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.dgrdmember, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -55,7 +56,7 @@ Partial Class frmDistrib
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(899, 34)
+        Me.Panel1.Size = New System.Drawing.Size(1298, 34)
         Me.Panel1.TabIndex = 18
         '
         'btnClose
@@ -115,18 +116,18 @@ Partial Class frmDistrib
         Me.Label6.TabIndex = 52
         Me.Label6.Text = "Venue: "
         '
-        'Button2
+        'btnAdd
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(768, 80)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(119, 37)
-        Me.Button2.TabIndex = 56
-        Me.Button2.Text = "ADD"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnAdd.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnAdd.FlatAppearance.BorderSize = 0
+        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAdd.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdd.Location = New System.Drawing.Point(768, 80)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(119, 37)
+        Me.btnAdd.TabIndex = 56
+        Me.btnAdd.Text = "ADD"
+        Me.btnAdd.UseVisualStyleBackColor = False
         '
         'Label5
         '
@@ -172,7 +173,7 @@ Partial Class frmDistrib
         Me.dgrdmember.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgrdmember.ColumnHeadersHeight = 40
         Me.dgrdmember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgrdmember.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column13, Me.Column9, Me.Column2, Me.Column3, Me.Column8, Me.Column4})
+        Me.dgrdmember.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column9, Me.Column2, Me.Column3, Me.Column8, Me.Column4, Me.Column5})
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -202,6 +203,14 @@ Partial Class frmDistrib
         Me.lblDate.TabIndex = 60
         Me.lblDate.Text = "Date"
         '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Panel2.Location = New System.Drawing.Point(902, 34)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(10, 589)
+        Me.Panel2.TabIndex = 61
+        '
         'Column1
         '
         Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
@@ -210,13 +219,6 @@ Partial Class frmDistrib
         Me.Column1.ReadOnly = True
         Me.Column1.Visible = False
         Me.Column1.Width = 5
-        '
-        'Column13
-        '
-        Me.Column13.HeaderText = "System Generated RSBSA no."
-        Me.Column13.Name = "Column13"
-        Me.Column13.ReadOnly = True
-        Me.Column13.Width = 150
         '
         'Column9
         '
@@ -230,11 +232,11 @@ Partial Class frmDistrib
         Me.Column2.HeaderText = "Name"
         Me.Column2.Name = "Column2"
         Me.Column2.ReadOnly = True
-        Me.Column2.Width = 150
+        Me.Column2.Width = 200
         '
         'Column3
         '
-        Me.Column3.HeaderText = "Address"
+        Me.Column3.HeaderText = "Barangay"
         Me.Column3.Name = "Column3"
         Me.Column3.ReadOnly = True
         Me.Column3.Width = 150
@@ -253,18 +255,25 @@ Partial Class frmDistrib
         Me.Column4.ReadOnly = True
         Me.Column4.Width = 150
         '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Unit"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
         'frmDistrib
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PaleTurquoise
-        Me.ClientSize = New System.Drawing.Size(899, 613)
+        Me.ClientSize = New System.Drawing.Size(1298, 613)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.lblDate)
         Me.Controls.Add(Me.dgrdmember)
         Me.Controls.Add(Me.lblVenue)
         Me.Controls.Add(Me.lblItems)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -287,17 +296,18 @@ Partial Class frmDistrib
     Friend WithEvents Button1 As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnAdd As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents lblItems As Label
     Friend WithEvents lblVenue As Label
     Friend WithEvents dgrdmember As DataGridView
     Friend WithEvents lblDate As Label
+    Friend WithEvents Panel2 As Panel
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column13 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
 End Class

@@ -22,12 +22,28 @@ Partial Class frmDashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDashboard))
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDashboard))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Chart3 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.lblAnimalNo = New System.Windows.Forms.Label()
@@ -36,19 +52,24 @@ Partial Class frmDashboard
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.lblCropsNo = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblFarmerNo = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.Panel8.SuspendLayout()
+        CType(Me.Chart3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel7.SuspendLayout()
+        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel5.SuspendLayout()
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
+        Me.Panel6.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -58,7 +79,7 @@ Partial Class frmDashboard
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1047, 34)
+        Me.Panel1.Size = New System.Drawing.Size(1030, 34)
         Me.Panel1.TabIndex = 11
         '
         'Label1
@@ -72,6 +93,151 @@ Partial Class frmDashboard
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "DASHBOARD"
         '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.Panel8)
+        Me.Panel2.Controls.Add(Me.Panel7)
+        Me.Panel2.Controls.Add(Me.Panel5)
+        Me.Panel2.Controls.Add(Me.Panel4)
+        Me.Panel2.Controls.Add(Me.Panel3)
+        Me.Panel2.Controls.Add(Me.Panel6)
+        Me.Panel2.Location = New System.Drawing.Point(0, 34)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1029, 1165)
+        Me.Panel2.TabIndex = 12
+        '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.Color.LightSeaGreen
+        Me.Panel8.Controls.Add(Me.Chart3)
+        Me.Panel8.Controls.Add(Me.Label4)
+        Me.Panel8.Location = New System.Drawing.Point(520, 675)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(479, 436)
+        Me.Panel8.TabIndex = 29
+        '
+        'Chart3
+        '
+        Me.Chart3.BackColor = System.Drawing.Color.Maroon
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart3.ChartAreas.Add(ChartArea1)
+        Legend1.Alignment = System.Drawing.StringAlignment.Center
+        Legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+        Legend1.Name = "Legend1"
+        Me.Chart3.Legends.Add(Legend1)
+        Me.Chart3.Location = New System.Drawing.Point(22, 56)
+        Me.Chart3.Name = "Chart3"
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+        Series1.LabelFormat = "#PERCENT"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Me.Chart3.Series.Add(Series1)
+        Me.Chart3.Size = New System.Drawing.Size(439, 369)
+        Me.Chart3.TabIndex = 22
+        Me.Chart3.Text = "Chart3"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(209, 19)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(91, 24)
+        Me.Label4.TabIndex = 21
+        Me.Label4.Text = "Animals"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.Color.LightSeaGreen
+        Me.Panel7.Controls.Add(Me.Chart2)
+        Me.Panel7.Controls.Add(Me.Label3)
+        Me.Panel7.Location = New System.Drawing.Point(19, 675)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(479, 436)
+        Me.Panel7.TabIndex = 28
+        '
+        'Chart2
+        '
+        Me.Chart2.BackColor = System.Drawing.Color.ForestGreen
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea2)
+        Legend2.Alignment = System.Drawing.StringAlignment.Center
+        Legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top
+        Legend2.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend2)
+        Me.Chart2.Location = New System.Drawing.Point(22, 56)
+        Me.Chart2.Name = "Chart2"
+        Series2.ChartArea = "ChartArea1"
+        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+        Series2.LabelFormat = "#PERCENT"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Me.Chart2.Series.Add(Series2)
+        Me.Chart2.Size = New System.Drawing.Size(439, 369)
+        Me.Chart2.TabIndex = 22
+        Me.Chart2.Text = "Chart2"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(206, 19)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(77, 24)
+        Me.Label3.TabIndex = 21
+        Me.Label3.Text = "Crops "
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.LightSeaGreen
+        Me.Panel5.Controls.Add(Me.Label2)
+        Me.Panel5.Controls.Add(Me.Chart1)
+        Me.Panel5.Location = New System.Drawing.Point(19, 190)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(980, 469)
+        Me.Panel5.TabIndex = 27
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(343, 18)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(343, 24)
+        Me.Label2.TabIndex = 21
+        Me.Label2.Text = "Number of Member per Barangay"
+        '
+        'Chart1
+        '
+        Me.Chart1.BackColor = System.Drawing.Color.LightSeaGreen
+        ChartArea3.Area3DStyle.PointDepth = 10
+        ChartArea3.Area3DStyle.PointGapDepth = 10
+        ChartArea3.AxisX.Interval = 1.0R
+        ChartArea3.AxisX.IsLabelAutoFit = False
+        ChartArea3.AxisX.LabelStyle.Angle = -45
+        ChartArea3.AxisX.LabelStyle.Font = New System.Drawing.Font("Arial Narrow", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea3.AxisX.MajorGrid.LineWidth = 0
+        ChartArea3.AxisY.MajorGrid.LineWidth = 0
+        ChartArea3.BackColor = System.Drawing.Color.White
+        ChartArea3.BackImageTransparentColor = System.Drawing.Color.Transparent
+        ChartArea3.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea3)
+        Legend3.Enabled = False
+        Legend3.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend3)
+        Me.Chart1.Location = New System.Drawing.Point(3, 59)
+        Me.Chart1.Name = "Chart1"
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        Me.Chart1.Series.Add(Series3)
+        Me.Chart1.Size = New System.Drawing.Size(974, 407)
+        Me.Chart1.TabIndex = 20
+        Me.Chart1.Text = "Chart1"
+        '
         'Panel4
         '
         Me.Panel4.AutoSize = True
@@ -79,10 +245,10 @@ Partial Class frmDashboard
         Me.Panel4.Controls.Add(Me.PictureBox3)
         Me.Panel4.Controls.Add(Me.lblAnimalNo)
         Me.Panel4.Controls.Add(Me.Label19)
-        Me.Panel4.Location = New System.Drawing.Point(689, 68)
+        Me.Panel4.Location = New System.Drawing.Point(686, 20)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(313, 153)
-        Me.Panel4.TabIndex = 19
+        Me.Panel4.TabIndex = 26
         '
         'PictureBox3
         '
@@ -123,10 +289,10 @@ Partial Class frmDashboard
         Me.Panel3.Controls.Add(Me.PictureBox2)
         Me.Panel3.Controls.Add(Me.lblCropsNo)
         Me.Panel3.Controls.Add(Me.Label17)
-        Me.Panel3.Location = New System.Drawing.Point(355, 68)
+        Me.Panel3.Location = New System.Drawing.Point(352, 20)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(313, 150)
-        Me.Panel3.TabIndex = 18
+        Me.Panel3.TabIndex = 25
         '
         'PictureBox2
         '
@@ -160,17 +326,17 @@ Partial Class frmDashboard
         Me.Label17.TabIndex = 0
         Me.Label17.Text = "TOTAL CROPS"
         '
-        'Panel2
+        'Panel6
         '
-        Me.Panel2.AutoSize = True
-        Me.Panel2.BackColor = System.Drawing.Color.RoyalBlue
-        Me.Panel2.Controls.Add(Me.PictureBox1)
-        Me.Panel2.Controls.Add(Me.lblFarmerNo)
-        Me.Panel2.Controls.Add(Me.Label14)
-        Me.Panel2.Location = New System.Drawing.Point(22, 68)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(313, 150)
-        Me.Panel2.TabIndex = 17
+        Me.Panel6.AutoSize = True
+        Me.Panel6.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Panel6.Controls.Add(Me.PictureBox1)
+        Me.Panel6.Controls.Add(Me.lblFarmerNo)
+        Me.Panel6.Controls.Add(Me.Label14)
+        Me.Panel6.Location = New System.Drawing.Point(19, 20)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(313, 150)
+        Me.Panel6.TabIndex = 24
         '
         'PictureBox1
         '
@@ -204,23 +370,6 @@ Partial Class frmDashboard
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "TOTAL MEMBERS"
         '
-        'Chart1
-        '
-        ChartArea2.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend2)
-        Me.Chart1.Location = New System.Drawing.Point(22, 283)
-        Me.Chart1.Name = "Chart1"
-        Series2.ChartArea = "ChartArea1"
-        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Me.Chart1.Series.Add(Series2)
-        Me.Chart1.Size = New System.Drawing.Size(980, 240)
-        Me.Chart1.TabIndex = 20
-        Me.Chart1.Text = "Chart1"
-        '
         'frmDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -229,32 +378,42 @@ Partial Class frmDashboard
         Me.BackColor = System.Drawing.Color.PaleTurquoise
         Me.ClientSize = New System.Drawing.Size(1047, 636)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Chart1)
-        Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmDashboard"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel8.PerformLayout()
+        CType(Me.Chart3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
+        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Chart1 As DataVisualization.Charting.Chart
     Friend WithEvents Panel4 As Panel
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents lblAnimalNo As Label
@@ -263,9 +422,14 @@ Partial Class frmDashboard
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents lblCropsNo As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel6 As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents lblFarmerNo As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents Chart1 As DataVisualization.Charting.Chart
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Chart2 As DataVisualization.Charting.Chart
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Chart3 As DataVisualization.Charting.Chart
+    Friend WithEvents Label4 As Label
 End Class

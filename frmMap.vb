@@ -203,8 +203,8 @@
     Private Sub lblCOTMO_Click(sender As Object, e As EventArgs) Handles lblCOTMO.Click
         PicMap.Image = My.Resources.Cotmo
         pnlInfo.Visible = True
-        MAP_BARANGAY = "COMTO"
-        lblbarangay.Text = "COMTO"
+        MAP_BARANGAY = "COTMO"
+        lblbarangay.Text = "COTMO"
         lblRegMemNo.Text = barangay_number(MAP_BARANGAY)
         lblAgriArea.Text = Agricultural_Area(MAP_BARANGAY).ToString + " (ha)"
         lblRiceNo.Text = rice_number(MAP_BARANGAY)

@@ -347,7 +347,7 @@
             openCon()
             Try
                 cmd.Connection = con
-                cmd.CommandText = "SELECT * FROM `member` ORDER BY `member`.`mem_pob` ASC"
+                cmd.CommandText = "SELECT * FROM `member` ORDER BY `member`.`mem_barangay` ASC"
                 reader = cmd.ExecuteReader()
                 'dgrdmember.DataSource = table
 

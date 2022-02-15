@@ -21,7 +21,7 @@
             dgvDistribute.Rows.Clear()
             Do While reader.Read = True
 
-                dgvDistribute.Rows.Add(reader(0), i, reader(1), reader(2), reader(3))
+                dgvDistribute.Rows.Add(reader(0), i, reader(1), reader(2), reader(3), reader(4))
                 i = i + 1
             Loop
         Catch ex As Exception
@@ -49,6 +49,7 @@
             Do While reader.Read = True
                 frmDistrib.lblItems.Text = reader("distributed_item")
                 frmDistrib.lblVenue.Text = reader("distributed_venue")
+
                 frmDistrib.lblDate.Text = reader("distributed_date")
 
 

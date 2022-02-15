@@ -8,7 +8,7 @@
         Me.Close()
     End Sub
 
-    Private Sub btnSaveUpdate_Click(sender As Object, e As EventArgs) Handles btnSaveUpdate.Click, Button1.Click
+    Private Sub btnSaveUpdate_Click(sender As Object, e As EventArgs) Handles Button1.Click
         openCon()
         Try
 
