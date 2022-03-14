@@ -28,8 +28,10 @@ Partial Class frmMain
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.Panel11 = New System.Windows.Forms.Panel()
         Me.btnImports = New System.Windows.Forms.Button()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.btnReport = New System.Windows.Forms.Button()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.Panel8 = New System.Windows.Forms.Panel()
@@ -47,6 +49,7 @@ Partial Class frmMain
         Me.pnlContainer = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.Panel11.SuspendLayout()
         Me.Panel10.SuspendLayout()
         Me.Panel9.SuspendLayout()
         Me.Panel8.SuspendLayout()
@@ -106,6 +109,7 @@ Partial Class frmMain
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Panel11)
         Me.Panel2.Controls.Add(Me.Panel10)
         Me.Panel2.Controls.Add(Me.Panel9)
         Me.Panel2.Controls.Add(Me.Panel8)
@@ -120,14 +124,14 @@ Partial Class frmMain
         Me.Panel2.Size = New System.Drawing.Size(245, 651)
         Me.Panel2.TabIndex = 2
         '
-        'Panel10
+        'Panel11
         '
-        Me.Panel10.Controls.Add(Me.btnImports)
-        Me.Panel10.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel10.Location = New System.Drawing.Point(0, 450)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(245, 50)
-        Me.Panel10.TabIndex = 7
+        Me.Panel11.Controls.Add(Me.btnImports)
+        Me.Panel11.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel11.Location = New System.Drawing.Point(0, 500)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(245, 50)
+        Me.Panel11.TabIndex = 8
         '
         'btnImports
         '
@@ -142,10 +146,37 @@ Partial Class frmMain
         Me.btnImports.Name = "btnImports"
         Me.btnImports.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.btnImports.Size = New System.Drawing.Size(245, 50)
-        Me.btnImports.TabIndex = 9
+        Me.btnImports.TabIndex = 7
         Me.btnImports.Text = "  Import"
         Me.btnImports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnImports.UseVisualStyleBackColor = False
+        '
+        'Panel10
+        '
+        Me.Panel10.Controls.Add(Me.btnReport)
+        Me.Panel10.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel10.Location = New System.Drawing.Point(0, 450)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(245, 50)
+        Me.Panel10.TabIndex = 8
+        '
+        'btnReport
+        '
+        Me.btnReport.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.btnReport.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnReport.FlatAppearance.BorderSize = 0
+        Me.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnReport.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReport.Image = Global.FRACIS.My.Resources.Resources.icons8_report_30
+        Me.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnReport.Location = New System.Drawing.Point(0, 0)
+        Me.btnReport.Name = "btnReport"
+        Me.btnReport.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.btnReport.Size = New System.Drawing.Size(245, 50)
+        Me.btnReport.TabIndex = 9
+        Me.btnReport.Text = "  Reports"
+        Me.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnReport.UseVisualStyleBackColor = False
         '
         'Panel9
         '
@@ -354,6 +385,7 @@ Partial Class frmMain
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
+        Me.Panel11.ResumeLayout(False)
         Me.Panel10.ResumeLayout(False)
         Me.Panel9.ResumeLayout(False)
         Me.Panel8.ResumeLayout(False)
@@ -387,5 +419,7 @@ Partial Class frmMain
     Friend WithEvents Panel9 As System.Windows.Forms.Panel
     Friend WithEvents btnLogout As System.Windows.Forms.Button
     Friend WithEvents Panel10 As System.Windows.Forms.Panel
-    Friend WithEvents btnImports As System.Windows.Forms.Button
+    Friend WithEvents btnReport As System.Windows.Forms.Button
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents btnImports As Button
 End Class

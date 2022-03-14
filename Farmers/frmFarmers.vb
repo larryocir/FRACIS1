@@ -19,34 +19,34 @@
         frmtransac.ShowDialog()
     End Sub
 
-    Sub loadTable()
-        openCon()
-        Try
-            cmd.Connection = con
-            cmd.CommandText = "SELECT * FROM member"
-            adapter.SelectCommand = cmd
-            table.Clear()
-            adapter.Fill(table)
-            'dgrdmember.DataSource = table
+    'Sub loadTable()
+    '    openCon()
+    '    Try
+    '        cmd.Connection = con
+    '        cmd.CommandText = "SELECT * FROM member"
+    '        adapter.SelectCommand = cmd
+    '        table.Clear()
+    '        adapter.Fill(table)
+    '        'dgrdmember.DataSource = table
 
 
-            If table.Rows.Count > 0 Then
-                For i = 0 To table.Rows.Count - 1
-                    dgrdmember.Rows.Add()
-                    For j = 0 To table.Columns.Count - 1
-                        dgrdmember.Rows(i).Cells(j).Value = table.Rows(i).Item(j).ToString
-                    Next
+    '        If table.Rows.Count > 0 Then
+    '            For i = 0 To table.Rows.Count - 1
+    '                dgrdmember.Rows.Add()
+    '                For j = 0 To table.Columns.Count - 1
+    '                    dgrdmember.Rows(i).Cells(j).Value = table.Rows(i).Item(j).ToString
+    '                Next
 
-                Next
+    '            Next
 
-            End If
-            Label4.Visible = False
+    '        End If
+    '        Label4.Visible = False
 
-            con.Close()
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-        End Try
-    End Sub
+    '        con.Close()
+    '    Catch ex As Exception
+    '        MsgBox(ex.ToString)
+    '    End Try
+    'End Sub
 
     Sub loadTable2()
         openCon()

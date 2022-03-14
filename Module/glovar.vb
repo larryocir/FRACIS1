@@ -35,6 +35,9 @@
     Public ANIMAL_QTY As Integer
     Public Success As Boolean
     Public result As Integer
+    Public DistriID As Integer = Nothing
+    Public DistributeItem As String = ""
+    Public DistributeUnit As String = ""
 
     Public RICEID As Integer = Nothing
     Public CORNID As Integer = Nothing

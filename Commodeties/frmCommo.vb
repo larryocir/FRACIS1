@@ -42,9 +42,11 @@
         Else
             DataGridViewLayoutAnimals()
             cmbCat.Items.Clear()
+            cmbCat.Items.Add("All Animals")
             cmbCat.Items.Add("Livestock")
             cmbCat.Items.Add("Poultry")
             cmbCat.Items.Add("Other Animals")
+            cmbCat.SelectedItem = "All Animals"
 
         End If
     End Sub
@@ -153,6 +155,91 @@
                     con.Close()
                 End Try
 
+            End If
+
+            'ANIMALS
+        ElseIf cmbCommo.SelectedItem = "Animals" Then
+            If cmbCat.SelectedItem = "All Animals" Then
+                openCon()
+                Try
+                    cmd.Connection = con
+                    cmd.CommandText = "SELECT animal_id, animal_type, animal_cat, animal_no, member.mem_lname, member.mem_fname, member.mem_mname, member.mem_barangay, member.mem_municipality, member.mem_province, member.mem_cp FROM `animal`, member where member.mem_id = animal.mem_id"
+                    reader = cmd.ExecuteReader()
+                    'dgrdmember.DataSource = table
+
+
+                    dgrdcommo.Rows.Clear()
+                    Do While reader.Read = True
+                        dgrdcommo.Rows.Add(reader(0), reader(1), reader(2), reader(3), reader(4) + ", " + reader(5) + " " + reader(6), reader(7) + ", " + reader(8) + ", " + reader(9), reader(10))
+                    Loop
+                    Label4.Visible = False
+                Catch ex As Exception
+                    MsgBox(ex.ToString)
+                Finally
+
+                    cmd.Dispose()
+                    con.Close()
+                End Try
+            ElseIf cmbCat.SelectedItem = "Livestock" Then
+                openCon()
+                Try
+                    cmd.Connection = con
+                    cmd.CommandText = "SELECT animal_id, animal_type, animal_cat, animal_no, member.mem_lname, member.mem_fname, member.mem_mname, member.mem_barangay, member.mem_municipality, member.mem_province, member.mem_cp FROM `animal`, member where member.mem_id = animal.mem_id AND animal.animal_cat = 'Livestock'"
+                    reader = cmd.ExecuteReader()
+                    'dgrdmember.DataSource = table
+
+                    dgrdcommo.Rows.Clear()
+                    Do While reader.Read = True
+                        dgrdcommo.Rows.Add(reader(0), reader(1), reader(2), reader(3), reader(4) + ", " + reader(5) + " " + reader(6), reader(7) + ", " + reader(8) + ", " + reader(9), reader(10))
+                    Loop
+                    Label4.Visible = False
+                Catch ex As Exception
+                    MsgBox(ex.ToString)
+                Finally
+
+                    cmd.Dispose()
+                    con.Close()
+                End Try
+            ElseIf cmbCat.SelectedItem = "Poultry" Then
+                openCon()
+                Try
+                    cmd.Connection = con
+                    cmd.CommandText = "SELECT animal_id, animal_type, animal_cat, animal_no, member.mem_lname, member.mem_fname, member.mem_mname, member.mem_barangay, member.mem_municipality, member.mem_province, member.mem_cp FROM `animal`, member where member.mem_id = animal.mem_id AND animal.animal_cat = 'Poultry'"
+                    reader = cmd.ExecuteReader()
+                    'dgrdmember.DataSource = table
+
+                    dgrdcommo.Rows.Clear()
+                    Do While reader.Read = True
+                        dgrdcommo.Rows.Add(reader(0), reader(1), reader(2), reader(3), reader(4) + ", " + reader(5) + " " + reader(6), reader(7) + ", " + reader(8) + ", " + reader(9), reader(10))
+                    Loop
+                    Label4.Visible = False
+                Catch ex As Exception
+                    MsgBox(ex.ToString)
+                Finally
+
+                    cmd.Dispose()
+                    con.Close()
+                End Try
+            ElseIf cmbCat.SelectedItem = "Other Animals" Then
+                openCon()
+                Try
+                    cmd.Connection = con
+                    cmd.CommandText = "SELECT animal_id, animal_type, animal_cat, animal_no, member.mem_lname, member.mem_fname, member.mem_mname, member.mem_barangay, member.mem_municipality, member.mem_province, member.mem_cp FROM `animal`, member where member.mem_id = animal.mem_id AND animal.animal_cat = 'Other Animals'"
+                    reader = cmd.ExecuteReader()
+                    'dgrdmember.DataSource = table
+
+                    dgrdcommo.Rows.Clear()
+                    Do While reader.Read = True
+                        dgrdcommo.Rows.Add(reader(0), reader(1), reader(2), reader(3), reader(4) + ", " + reader(5) + " " + reader(6), reader(7) + ", " + reader(8) + ", " + reader(9), reader(10))
+                    Loop
+                    Label4.Visible = False
+                Catch ex As Exception
+                    MsgBox(ex.ToString)
+                Finally
+
+                    cmd.Dispose()
+                    con.Close()
+                End Try
             End If
         End If
 

@@ -23,13 +23,8 @@ Partial Class frmtransac
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmtransac))
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -102,22 +97,6 @@ Partial Class frmtransac
         Me.txtFarmArea = New System.Windows.Forms.TextBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.btnNext3 = New System.Windows.Forms.Button()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.btnEditCrops = New System.Windows.Forms.Button()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.cmbCropCat = New System.Windows.Forms.ComboBox()
-        Me.txtCropType = New System.Windows.Forms.TextBox()
-        Me.btnRemoveCrops = New System.Windows.Forms.Button()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.btnAddCrops = New System.Windows.Forms.Button()
-        Me.txtLandArea = New System.Windows.Forms.TextBox()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.dgrdcrop = New System.Windows.Forms.DataGridView()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnPrevious2 = New System.Windows.Forms.Button()
         Me.btnSaveUpdate = New System.Windows.Forms.Button()
         Me.Label32 = New System.Windows.Forms.Label()
@@ -170,24 +149,6 @@ Partial Class frmtransac
         Me.txtCoconut = New System.Windows.Forms.TextBox()
         Me.txtCorn = New System.Windows.Forms.TextBox()
         Me.txtRice = New System.Windows.Forms.TextBox()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.btnPrevious3 = New System.Windows.Forms.Button()
-        Me.btnSaveUpdate2 = New System.Windows.Forms.Button()
-        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
-        Me.btnEditAnimal = New System.Windows.Forms.Button()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.cmbAnimalCat = New System.Windows.Forms.ComboBox()
-        Me.txtAnimalType = New System.Windows.Forms.TextBox()
-        Me.btnRemoveAnimal = New System.Windows.Forms.Button()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.btnAddAnimal = New System.Windows.Forms.Button()
-        Me.txtNumber = New System.Windows.Forms.TextBox()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.dgrdanimal = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -204,17 +165,10 @@ Partial Class frmtransac
         Me.GroupBox4.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.Panel6.SuspendLayout()
-        Me.Panel8.SuspendLayout()
-        Me.GroupBox7.SuspendLayout()
-        CType(Me.dgrdcrop, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox12.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox11.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
-        Me.Panel9.SuspendLayout()
-        Me.GroupBox8.SuspendLayout()
-        CType(Me.dgrdanimal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -230,7 +184,6 @@ Partial Class frmtransac
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.DarkOliveGreen
-        Me.Panel3.Controls.Add(Me.Button5)
         Me.Panel3.Controls.Add(Me.Button4)
         Me.Panel3.Controls.Add(Me.Button3)
         Me.Panel3.Controls.Add(Me.Button2)
@@ -241,22 +194,6 @@ Partial Class frmtransac
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1234, 81)
         Me.Panel3.TabIndex = 42
-        '
-        'Button5
-        '
-        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Image = Global.FRACIS.My.Resources.Resources._4
-        Me.Button5.Location = New System.Drawing.Point(650, 41)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.Button5.Size = New System.Drawing.Size(191, 39)
-        Me.Button5.TabIndex = 45
-        Me.Button5.Text = "  ANIMALS"
-        Me.Button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button5.UseVisualStyleBackColor = False
         '
         'Button4
         '
@@ -270,7 +207,7 @@ Partial Class frmtransac
         Me.Button4.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.Button4.Size = New System.Drawing.Size(191, 39)
         Me.Button4.TabIndex = 44
-        Me.Button4.Text = "  CROPS"
+        Me.Button4.Text = "  COMMODITIES"
         Me.Button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button4.UseVisualStyleBackColor = False
         '
@@ -361,7 +298,6 @@ Partial Class frmtransac
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Location = New System.Drawing.Point(0, 53)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -633,7 +569,6 @@ Partial Class frmtransac
         '
         'cmbbarangay
         '
-        Me.cmbbarangay.AutoCompleteCustomSource.AddRange(New String() {"ALDEZAR", "ALTEZA", "ANIB", "AWAYAN", "AZUCENA", "BAGONG SIRANG", "BINAHIAN", "BOLO NORTE", "BOLO SUR", "BULAN", "BULAWAN", "CABUYAO", "CAIMA", "CALAGBANGAN", "CALAMPINAY", "CARAYRAYAN", "COTMO", "GABI", "GAONGAN", "IMPIG", "LIPLIP", "LUBIGAN JR.", "LUBIGAN SR.", "MALAGUICO", "MALUBAGO", "MANANGLE", "MANGAPO", "MANGGA", "MANLUBANG", "MANTILLA", "NORTH CENTRO", "NORTH VILLAZAR", "SAGRADA FAMILIA", "SALANDA", "SALVACION", "SAN ISIDRO", "SAN VINCENTE", "SERRANZANA", "SOUTH CENTRO", "SOUTH VILLAZAR", "TAISAN", "TARA", "TIBLE", "TULA-TULA", "VIGAAN", "YABO"})
         Me.cmbbarangay.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbbarangay.FormattingEnabled = True
         Me.cmbbarangay.ItemHeight = 18
@@ -1066,8 +1001,6 @@ Partial Class frmtransac
         '
         'Panel6
         '
-        Me.Panel6.Controls.Add(Me.btnNext3)
-        Me.Panel6.Controls.Add(Me.Panel8)
         Me.Panel6.Controls.Add(Me.btnPrevious2)
         Me.Panel6.Controls.Add(Me.btnSaveUpdate)
         Me.Panel6.Controls.Add(Me.Label32)
@@ -1083,207 +1016,6 @@ Partial Class frmtransac
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(1220, 549)
         Me.Panel6.TabIndex = 2
-        '
-        'btnNext3
-        '
-        Me.btnNext3.FlatAppearance.BorderSize = 0
-        Me.btnNext3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnNext3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNext3.Image = Global.FRACIS.My.Resources.Resources.icons_arrow_right
-        Me.btnNext3.Location = New System.Drawing.Point(1118, 489)
-        Me.btnNext3.Name = "btnNext3"
-        Me.btnNext3.Size = New System.Drawing.Size(96, 55)
-        Me.btnNext3.TabIndex = 52
-        Me.btnNext3.Text = "   NEXT"
-        Me.btnNext3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNext3.UseVisualStyleBackColor = True
-        '
-        'Panel8
-        '
-        Me.Panel8.Controls.Add(Me.GroupBox7)
-        Me.Panel8.Controls.Add(Me.dgrdcrop)
-        Me.Panel8.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel8.Location = New System.Drawing.Point(0, 0)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(1220, 475)
-        Me.Panel8.TabIndex = 51
-        '
-        'GroupBox7
-        '
-        Me.GroupBox7.Controls.Add(Me.btnEditCrops)
-        Me.GroupBox7.Controls.Add(Me.Label29)
-        Me.GroupBox7.Controls.Add(Me.cmbCropCat)
-        Me.GroupBox7.Controls.Add(Me.txtCropType)
-        Me.GroupBox7.Controls.Add(Me.btnRemoveCrops)
-        Me.GroupBox7.Controls.Add(Me.Label38)
-        Me.GroupBox7.Controls.Add(Me.btnAddCrops)
-        Me.GroupBox7.Controls.Add(Me.txtLandArea)
-        Me.GroupBox7.Controls.Add(Me.Label39)
-        Me.GroupBox7.Location = New System.Drawing.Point(37, 34)
-        Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(441, 400)
-        Me.GroupBox7.TabIndex = 55
-        Me.GroupBox7.TabStop = False
-        '
-        'btnEditCrops
-        '
-        Me.btnEditCrops.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.btnEditCrops.FlatAppearance.BorderSize = 0
-        Me.btnEditCrops.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEditCrops.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEditCrops.Location = New System.Drawing.Point(154, 313)
-        Me.btnEditCrops.Name = "btnEditCrops"
-        Me.btnEditCrops.Size = New System.Drawing.Size(117, 28)
-        Me.btnEditCrops.TabIndex = 53
-        Me.btnEditCrops.Text = "Edit"
-        Me.btnEditCrops.UseVisualStyleBackColor = False
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(24, 62)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(75, 17)
-        Me.Label29.TabIndex = 8
-        Me.Label29.Text = "Crop Type"
-        '
-        'cmbCropCat
-        '
-        Me.cmbCropCat.AutoCompleteCustomSource.AddRange(New String() {"Rice", "Corn", "Coconut", "HVCDP"})
-        Me.cmbCropCat.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
-        Me.cmbCropCat.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.cmbCropCat.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbCropCat.FormattingEnabled = True
-        Me.cmbCropCat.ItemHeight = 18
-        Me.cmbCropCat.Items.AddRange(New Object() {"Rice", "Corn", "Coconut", "HVCDP"})
-        Me.cmbCropCat.Location = New System.Drawing.Point(27, 161)
-        Me.cmbCropCat.Name = "cmbCropCat"
-        Me.cmbCropCat.Size = New System.Drawing.Size(371, 26)
-        Me.cmbCropCat.TabIndex = 8
-        '
-        'txtCropType
-        '
-        Me.txtCropType.AutoCompleteCustomSource.AddRange(New String() {"Swine", "Cattle", "Carabao", "Goat", "Chicken", "Duck", "Goose", "Turkey", "Dog"})
-        Me.txtCropType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.txtCropType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txtCropType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCropType.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCropType.Location = New System.Drawing.Point(27, 84)
-        Me.txtCropType.Name = "txtCropType"
-        Me.txtCropType.Size = New System.Drawing.Size(371, 26)
-        Me.txtCropType.TabIndex = 7
-        '
-        'btnRemoveCrops
-        '
-        Me.btnRemoveCrops.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.btnRemoveCrops.FlatAppearance.BorderSize = 0
-        Me.btnRemoveCrops.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRemoveCrops.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRemoveCrops.Location = New System.Drawing.Point(281, 313)
-        Me.btnRemoveCrops.Name = "btnRemoveCrops"
-        Me.btnRemoveCrops.Size = New System.Drawing.Size(117, 28)
-        Me.btnRemoveCrops.TabIndex = 54
-        Me.btnRemoveCrops.Text = "Remove"
-        Me.btnRemoveCrops.UseVisualStyleBackColor = False
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = True
-        Me.Label38.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.Location = New System.Drawing.Point(24, 136)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(103, 17)
-        Me.Label38.TabIndex = 11
-        Me.Label38.Text = "Crop Category"
-        '
-        'btnAddCrops
-        '
-        Me.btnAddCrops.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.btnAddCrops.FlatAppearance.BorderSize = 0
-        Me.btnAddCrops.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddCrops.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddCrops.Location = New System.Drawing.Point(27, 313)
-        Me.btnAddCrops.Name = "btnAddCrops"
-        Me.btnAddCrops.Size = New System.Drawing.Size(117, 28)
-        Me.btnAddCrops.TabIndex = 52
-        Me.btnAddCrops.Text = "Add"
-        Me.btnAddCrops.UseVisualStyleBackColor = False
-        '
-        'txtLandArea
-        '
-        Me.txtLandArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtLandArea.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLandArea.Location = New System.Drawing.Point(27, 231)
-        Me.txtLandArea.Name = "txtLandArea"
-        Me.txtLandArea.Size = New System.Drawing.Size(371, 26)
-        Me.txtLandArea.TabIndex = 12
-        '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.Location = New System.Drawing.Point(24, 209)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(148, 17)
-        Me.Label39.TabIndex = 13
-        Me.Label39.Text = "Land Area (hectare/s)"
-        '
-        'dgrdcrop
-        '
-        Me.dgrdcrop.AllowUserToAddRows = False
-        Me.dgrdcrop.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.dgrdcrop.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(75, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgrdcrop.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
-        Me.dgrdcrop.ColumnHeadersHeight = 40
-        Me.dgrdcrop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgrdcrop.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column6, Me.Column10, Me.Column11})
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(111, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgrdcrop.DefaultCellStyle = DataGridViewCellStyle6
-        Me.dgrdcrop.EnableHeadersVisualStyles = False
-        Me.dgrdcrop.Location = New System.Drawing.Point(500, 34)
-        Me.dgrdcrop.Name = "dgrdcrop"
-        Me.dgrdcrop.ReadOnly = True
-        Me.dgrdcrop.RowHeadersVisible = False
-        Me.dgrdcrop.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.dgrdcrop.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgrdcrop.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgrdcrop.Size = New System.Drawing.Size(643, 400)
-        Me.dgrdcrop.TabIndex = 9
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Type"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.Width = 220
-        '
-        'Column10
-        '
-        Me.Column10.HeaderText = "Category"
-        Me.Column10.Name = "Column10"
-        Me.Column10.ReadOnly = True
-        Me.Column10.Width = 220
-        '
-        'Column11
-        '
-        Me.Column11.HeaderText = "Land Area(hectare/s)"
-        Me.Column11.Name = "Column11"
-        Me.Column11.ReadOnly = True
-        Me.Column11.Width = 200
         '
         'btnPrevious2
         '
@@ -1311,7 +1043,6 @@ Partial Class frmtransac
         Me.btnSaveUpdate.TabIndex = 49
         Me.btnSaveUpdate.Text = "SAVE"
         Me.btnSaveUpdate.UseVisualStyleBackColor = False
-        Me.btnSaveUpdate.Visible = False
         '
         'Label32
         '
@@ -1887,233 +1618,6 @@ Partial Class frmtransac
         Me.txtRice.Size = New System.Drawing.Size(67, 26)
         Me.txtRice.TabIndex = 17
         '
-        'TabPage4
-        '
-        Me.TabPage4.Controls.Add(Me.Panel9)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1226, 555)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "TabPage4"
-        Me.TabPage4.UseVisualStyleBackColor = True
-        '
-        'Panel9
-        '
-        Me.Panel9.Controls.Add(Me.btnPrevious3)
-        Me.Panel9.Controls.Add(Me.btnSaveUpdate2)
-        Me.Panel9.Controls.Add(Me.GroupBox8)
-        Me.Panel9.Controls.Add(Me.dgrdanimal)
-        Me.Panel9.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel9.Location = New System.Drawing.Point(3, 3)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(1220, 549)
-        Me.Panel9.TabIndex = 52
-        '
-        'btnPrevious3
-        '
-        Me.btnPrevious3.FlatAppearance.BorderSize = 0
-        Me.btnPrevious3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPrevious3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPrevious3.Image = Global.FRACIS.My.Resources.Resources.icons_arrow_left
-        Me.btnPrevious3.Location = New System.Drawing.Point(5, 489)
-        Me.btnPrevious3.Name = "btnPrevious3"
-        Me.btnPrevious3.Size = New System.Drawing.Size(95, 55)
-        Me.btnPrevious3.TabIndex = 57
-        Me.btnPrevious3.Text = "PREVIOUS"
-        Me.btnPrevious3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnPrevious3.UseVisualStyleBackColor = True
-        '
-        'btnSaveUpdate2
-        '
-        Me.btnSaveUpdate2.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnSaveUpdate2.FlatAppearance.BorderSize = 0
-        Me.btnSaveUpdate2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSaveUpdate2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSaveUpdate2.Location = New System.Drawing.Point(522, 484)
-        Me.btnSaveUpdate2.Name = "btnSaveUpdate2"
-        Me.btnSaveUpdate2.Size = New System.Drawing.Size(169, 42)
-        Me.btnSaveUpdate2.TabIndex = 56
-        Me.btnSaveUpdate2.Text = "SAVE"
-        Me.btnSaveUpdate2.UseVisualStyleBackColor = False
-        '
-        'GroupBox8
-        '
-        Me.GroupBox8.Controls.Add(Me.btnEditAnimal)
-        Me.GroupBox8.Controls.Add(Me.Label40)
-        Me.GroupBox8.Controls.Add(Me.cmbAnimalCat)
-        Me.GroupBox8.Controls.Add(Me.txtAnimalType)
-        Me.GroupBox8.Controls.Add(Me.btnRemoveAnimal)
-        Me.GroupBox8.Controls.Add(Me.Label41)
-        Me.GroupBox8.Controls.Add(Me.btnAddAnimal)
-        Me.GroupBox8.Controls.Add(Me.txtNumber)
-        Me.GroupBox8.Controls.Add(Me.Label42)
-        Me.GroupBox8.Location = New System.Drawing.Point(37, 34)
-        Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Size = New System.Drawing.Size(441, 400)
-        Me.GroupBox8.TabIndex = 55
-        Me.GroupBox8.TabStop = False
-        '
-        'btnEditAnimal
-        '
-        Me.btnEditAnimal.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.btnEditAnimal.FlatAppearance.BorderSize = 0
-        Me.btnEditAnimal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEditAnimal.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEditAnimal.Location = New System.Drawing.Point(154, 313)
-        Me.btnEditAnimal.Name = "btnEditAnimal"
-        Me.btnEditAnimal.Size = New System.Drawing.Size(117, 28)
-        Me.btnEditAnimal.TabIndex = 53
-        Me.btnEditAnimal.Text = "Edit"
-        Me.btnEditAnimal.UseVisualStyleBackColor = False
-        '
-        'Label40
-        '
-        Me.Label40.AutoSize = True
-        Me.Label40.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label40.Location = New System.Drawing.Point(24, 62)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(87, 17)
-        Me.Label40.TabIndex = 8
-        Me.Label40.Text = "Animal Type"
-        '
-        'cmbAnimalCat
-        '
-        Me.cmbAnimalCat.AutoCompleteCustomSource.AddRange(New String() {"Livestock", "Poultry", "Other Animals"})
-        Me.cmbAnimalCat.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
-        Me.cmbAnimalCat.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.cmbAnimalCat.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbAnimalCat.FormattingEnabled = True
-        Me.cmbAnimalCat.ItemHeight = 18
-        Me.cmbAnimalCat.Items.AddRange(New Object() {"Livestock", "Poultry", "Other Animals"})
-        Me.cmbAnimalCat.Location = New System.Drawing.Point(27, 161)
-        Me.cmbAnimalCat.Name = "cmbAnimalCat"
-        Me.cmbAnimalCat.Size = New System.Drawing.Size(371, 26)
-        Me.cmbAnimalCat.TabIndex = 8
-        '
-        'txtAnimalType
-        '
-        Me.txtAnimalType.AutoCompleteCustomSource.AddRange(New String() {"Swine", "Cattle", "Carabao", "Goat", "Chicken", "Duck", "Goose", "Turkey", "Dog"})
-        Me.txtAnimalType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.txtAnimalType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txtAnimalType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtAnimalType.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAnimalType.Location = New System.Drawing.Point(27, 84)
-        Me.txtAnimalType.Name = "txtAnimalType"
-        Me.txtAnimalType.Size = New System.Drawing.Size(371, 26)
-        Me.txtAnimalType.TabIndex = 7
-        '
-        'btnRemoveAnimal
-        '
-        Me.btnRemoveAnimal.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.btnRemoveAnimal.FlatAppearance.BorderSize = 0
-        Me.btnRemoveAnimal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRemoveAnimal.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRemoveAnimal.Location = New System.Drawing.Point(281, 313)
-        Me.btnRemoveAnimal.Name = "btnRemoveAnimal"
-        Me.btnRemoveAnimal.Size = New System.Drawing.Size(117, 28)
-        Me.btnRemoveAnimal.TabIndex = 54
-        Me.btnRemoveAnimal.Text = "Remove"
-        Me.btnRemoveAnimal.UseVisualStyleBackColor = False
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.Location = New System.Drawing.Point(24, 136)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(115, 17)
-        Me.Label41.TabIndex = 11
-        Me.Label41.Text = "Animal Category"
-        '
-        'btnAddAnimal
-        '
-        Me.btnAddAnimal.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.btnAddAnimal.FlatAppearance.BorderSize = 0
-        Me.btnAddAnimal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddAnimal.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddAnimal.Location = New System.Drawing.Point(27, 313)
-        Me.btnAddAnimal.Name = "btnAddAnimal"
-        Me.btnAddAnimal.Size = New System.Drawing.Size(117, 28)
-        Me.btnAddAnimal.TabIndex = 52
-        Me.btnAddAnimal.Text = "Add"
-        Me.btnAddAnimal.UseVisualStyleBackColor = False
-        '
-        'txtNumber
-        '
-        Me.txtNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtNumber.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNumber.Location = New System.Drawing.Point(27, 231)
-        Me.txtNumber.Name = "txtNumber"
-        Me.txtNumber.Size = New System.Drawing.Size(371, 26)
-        Me.txtNumber.TabIndex = 12
-        '
-        'Label42
-        '
-        Me.Label42.AutoSize = True
-        Me.Label42.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label42.Location = New System.Drawing.Point(24, 209)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(194, 17)
-        Me.Label42.TabIndex = 13
-        Me.Label42.Text = "Number of Animal (per head)"
-        '
-        'dgrdanimal
-        '
-        Me.dgrdanimal.AllowUserToAddRows = False
-        Me.dgrdanimal.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.dgrdanimal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(147, Byte), Integer), CType(CType(75, Byte), Integer))
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgrdanimal.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
-        Me.dgrdanimal.ColumnHeadersHeight = 40
-        Me.dgrdanimal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgrdanimal.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(49, Byte), Integer), CType(CType(173, Byte), Integer), CType(CType(111, Byte), Integer))
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgrdanimal.DefaultCellStyle = DataGridViewCellStyle8
-        Me.dgrdanimal.EnableHeadersVisualStyles = False
-        Me.dgrdanimal.Location = New System.Drawing.Point(500, 34)
-        Me.dgrdanimal.Name = "dgrdanimal"
-        Me.dgrdanimal.ReadOnly = True
-        Me.dgrdanimal.RowHeadersVisible = False
-        Me.dgrdanimal.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.dgrdanimal.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgrdanimal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgrdanimal.Size = New System.Drawing.Size(643, 400)
-        Me.dgrdanimal.TabIndex = 9
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Type"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Width = 220
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Category"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        Me.DataGridViewTextBoxColumn2.Width = 220
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Number(per head)"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        Me.DataGridViewTextBoxColumn3.Width = 200
-        '
         'frmtransac
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2149,10 +1653,6 @@ Partial Class frmtransac
         Me.TabPage3.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
-        Me.Panel8.ResumeLayout(False)
-        Me.GroupBox7.ResumeLayout(False)
-        Me.GroupBox7.PerformLayout()
-        CType(Me.dgrdcrop, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox12.ResumeLayout(False)
         Me.GroupBox12.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)
@@ -2161,11 +1661,6 @@ Partial Class frmtransac
         Me.GroupBox11.PerformLayout()
         Me.GroupBox10.ResumeLayout(False)
         Me.GroupBox10.PerformLayout()
-        Me.TabPage4.ResumeLayout(False)
-        Me.Panel9.ResumeLayout(False)
-        Me.GroupBox8.ResumeLayout(False)
-        Me.GroupBox8.PerformLayout()
-        CType(Me.dgrdanimal, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2295,39 +1790,4 @@ Partial Class frmtransac
     Friend WithEvents btnNext2 As Button
     Friend WithEvents btnPrevious As Button
     Friend WithEvents btnPrevious2 As Button
-    Friend WithEvents Panel8 As Panel
-    Friend WithEvents Label29 As Label
-    Friend WithEvents txtCropType As TextBox
-    Friend WithEvents dgrdcrop As DataGridView
-    Friend WithEvents btnRemoveCrops As Button
-    Friend WithEvents btnAddCrops As Button
-    Friend WithEvents Label39 As Label
-    Friend WithEvents txtLandArea As TextBox
-    Friend WithEvents Label38 As Label
-    Friend WithEvents cmbCropCat As ComboBox
-    Friend WithEvents GroupBox7 As GroupBox
-    Friend WithEvents btnEditCrops As Button
-    Friend WithEvents TabPage4 As TabPage
-    Friend WithEvents Panel9 As Panel
-    Friend WithEvents GroupBox8 As GroupBox
-    Friend WithEvents btnEditAnimal As Button
-    Friend WithEvents Label40 As Label
-    Friend WithEvents cmbAnimalCat As ComboBox
-    Friend WithEvents txtAnimalType As TextBox
-    Friend WithEvents btnRemoveAnimal As Button
-    Friend WithEvents Label41 As Label
-    Friend WithEvents btnAddAnimal As Button
-    Friend WithEvents txtNumber As TextBox
-    Friend WithEvents Label42 As Label
-    Friend WithEvents dgrdanimal As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents btnNext3 As Button
-    Friend WithEvents btnPrevious3 As Button
-    Friend WithEvents btnSaveUpdate2 As Button
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column10 As DataGridViewTextBoxColumn
-    Friend WithEvents Column11 As DataGridViewTextBoxColumn
-    Friend WithEvents Button5 As Button
 End Class

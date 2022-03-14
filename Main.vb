@@ -24,7 +24,8 @@
         btnCommo.BackColor = Color.FromArgb(46, 204, 113)
         btnMap.BackColor = Color.FromArgb(46, 204, 113)
         btnDistributed.BackColor = Color.FromArgb(46, 204, 113)
-        btnImports.BackColor = Color.FromArgb(46, 204, 113)
+        btnReport.BackColor = Color.FromArgb(46, 204, 113)
+
     End Sub
 
     Private Sub btnfarmers_Click(sender As Object, e As EventArgs) Handles btnfarmers.Click
@@ -39,6 +40,7 @@
         btnCommo.BackColor = Color.FromArgb(46, 204, 113)
         btnMap.BackColor = Color.FromArgb(46, 204, 113)
         btnDistributed.BackColor = Color.FromArgb(46, 204, 113)
+        btnReport.BackColor = Color.FromArgb(46, 204, 113)
         btnImports.BackColor = Color.FromArgb(46, 204, 113)
     End Sub
 
@@ -54,6 +56,7 @@
         btnfarmers.BackColor = Color.FromArgb(46, 204, 113)
         btnMap.BackColor = Color.FromArgb(46, 204, 113)
         btnDistributed.BackColor = Color.FromArgb(46, 204, 113)
+        btnReport.BackColor = Color.FromArgb(46, 204, 113)
         btnImports.BackColor = Color.FromArgb(46, 204, 113)
     End Sub
 
@@ -70,6 +73,7 @@
         btnfarmers.BackColor = Color.FromArgb(46, 204, 113)
         btnCommo.BackColor = Color.FromArgb(46, 204, 113)
         btnDistributed.BackColor = Color.FromArgb(46, 204, 113)
+        btnReport.BackColor = Color.FromArgb(46, 204, 113)
         btnImports.BackColor = Color.FromArgb(46, 204, 113)
     End Sub
 
@@ -84,6 +88,7 @@
         btnfarmers.BackColor = Color.FromArgb(46, 204, 113)
         btnCommo.BackColor = Color.FromArgb(46, 204, 113)
         btnMap.BackColor = Color.FromArgb(46, 204, 113)
+        btnReport.BackColor = Color.FromArgb(46, 204, 113)
         btnImports.BackColor = Color.FromArgb(46, 204, 113)
     End Sub
 
@@ -92,7 +97,23 @@
         Me.Close()
     End Sub
 
-    Private Sub btnImports_Click(sender As Object, e As EventArgs) Handles btnImports.Click
+    Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
+        pnlContainer.Controls.Clear()
+        frmReport.TopLevel = False
+        pnlContainer.Controls.Add(frmReport)
+        frmReport.Show()
+
+        btnReport.BackColor = Color.PaleTurquoise
+        btnDash.BackColor = Color.FromArgb(46, 204, 113)
+        btnfarmers.BackColor = Color.FromArgb(46, 204, 113)
+        btnCommo.BackColor = Color.FromArgb(46, 204, 113)
+        btnMap.BackColor = Color.FromArgb(46, 204, 113)
+        btnDistributed.BackColor = Color.FromArgb(46, 204, 113)
+        btnImports.BackColor = Color.FromArgb(46, 204, 113)
+    End Sub
+
+
+    Private Sub btnImports_Click_1(sender As Object, e As EventArgs) Handles btnImports.Click
         pnlContainer.Controls.Clear()
         frmImport.TopLevel = False
         pnlContainer.Controls.Add(frmImport)
@@ -104,5 +125,6 @@
         btnCommo.BackColor = Color.FromArgb(46, 204, 113)
         btnMap.BackColor = Color.FromArgb(46, 204, 113)
         btnDistributed.BackColor = Color.FromArgb(46, 204, 113)
+        btnReport.BackColor = Color.FromArgb(46, 204, 113)
     End Sub
 End Class
