@@ -30,12 +30,12 @@ Partial Class frmCommo
         Me.dgrdcommo = New System.Windows.Forms.DataGridView()
         Me.btnEdit = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmbCat = New System.Windows.Forms.ComboBox()
+        Me.cmbCommo = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.cmbCommo = New System.Windows.Forms.ComboBox()
-        Me.cmbCat = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.dgrdcommo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -117,6 +117,7 @@ Partial Class frmCommo
         Me.btnEdit.TabIndex = 4
         Me.btnEdit.Text = "View"
         Me.btnEdit.UseVisualStyleBackColor = False
+        Me.btnEdit.Visible = False
         '
         'Panel2
         '
@@ -130,6 +131,35 @@ Partial Class frmCommo
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1047, 37)
         Me.Panel2.TabIndex = 17
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(277, 10)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(76, 18)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "Category:"
+        '
+        'cmbCat
+        '
+        Me.cmbCat.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbCat.FormattingEnabled = True
+        Me.cmbCat.Location = New System.Drawing.Point(355, 6)
+        Me.cmbCat.Name = "cmbCat"
+        Me.cmbCat.Size = New System.Drawing.Size(164, 25)
+        Me.cmbCat.TabIndex = 6
+        '
+        'cmbCommo
+        '
+        Me.cmbCommo.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbCommo.FormattingEnabled = True
+        Me.cmbCommo.Items.AddRange(New Object() {"Crops", "Animals"})
+        Me.cmbCommo.Location = New System.Drawing.Point(12, 6)
+        Me.cmbCommo.Name = "cmbCommo"
+        Me.cmbCommo.Size = New System.Drawing.Size(182, 25)
+        Me.cmbCommo.TabIndex = 5
         '
         'Label3
         '
@@ -160,35 +190,6 @@ Partial Class frmCommo
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(1047, 517)
         Me.Panel6.TabIndex = 18
-        '
-        'cmbCommo
-        '
-        Me.cmbCommo.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbCommo.FormattingEnabled = True
-        Me.cmbCommo.Items.AddRange(New Object() {"Crops", "Animals"})
-        Me.cmbCommo.Location = New System.Drawing.Point(12, 6)
-        Me.cmbCommo.Name = "cmbCommo"
-        Me.cmbCommo.Size = New System.Drawing.Size(182, 25)
-        Me.cmbCommo.TabIndex = 5
-        '
-        'cmbCat
-        '
-        Me.cmbCat.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbCat.FormattingEnabled = True
-        Me.cmbCat.Location = New System.Drawing.Point(355, 6)
-        Me.cmbCat.Name = "cmbCat"
-        Me.cmbCat.Size = New System.Drawing.Size(164, 25)
-        Me.cmbCat.TabIndex = 6
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(277, 10)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(76, 18)
-        Me.Label1.TabIndex = 7
-        Me.Label1.Text = "Category:"
         '
         'frmCommo
         '

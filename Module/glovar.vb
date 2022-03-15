@@ -48,7 +48,8 @@
     Public CARABAOID, SWINEID, CATTLEID, GOATID, CHICKENID, DUCKID, TURKEYID, GOOSEID, DOGID, CATID, CROP_ID, MEM_ID, ANIMAL_ID, FARM_ID As Integer
     Public MAP_BARANGAY As String
 
-
+    Public UserID As String
+    Public Name As String
 
 
 End Module

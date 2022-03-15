@@ -6,6 +6,7 @@
 
     End Sub
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        frmNewDistribution.btnSave.Text = "Save"
         frmNewDistribution.ShowDialog()
 
     End Sub
@@ -88,5 +89,14 @@
         frmDistrib.ShowDialog()
     End Sub
 
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+        GlobalId = dgvDistribute.CurrentRow.Cells(0).Value
+        frmNewDistribution.btnSave.Text = "Update"
+        frmNewDistribution.txtItem.Text = dgvDistribute.CurrentRow.Cells(2).Value.ToString
+        frmNewDistribution.txtUnits.Text = dgvDistribute.CurrentRow.Cells(3).Value
+        frmNewDistribution.txtVenue.Text = dgvDistribute.CurrentRow.Cells(4).Value
+        frmNewDistribution.dtpDate.Text = dgvDistribute.CurrentRow.Cells(5).Value
+        frmNewDistribution.ShowDialog()
 
+    End Sub
 End Class

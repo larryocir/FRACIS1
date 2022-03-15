@@ -24,11 +24,14 @@ Partial Class frmLogin
     Private Sub InitializeComponent()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.txtUser = New System.Windows.Forms.TextBox()
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.lblUser = New System.Windows.Forms.Label()
         Me.lblPass = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnLogin
@@ -37,7 +40,7 @@ Partial Class frmLogin
         Me.btnLogin.FlatAppearance.BorderSize = 0
         Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogin.ForeColor = System.Drawing.Color.White
-        Me.btnLogin.Location = New System.Drawing.Point(87, 373)
+        Me.btnLogin.Location = New System.Drawing.Point(87, 257)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(100, 40)
         Me.btnLogin.TabIndex = 0
@@ -50,29 +53,17 @@ Partial Class frmLogin
         Me.btnClose.FlatAppearance.BorderSize = 0
         Me.btnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClose.ForeColor = System.Drawing.Color.White
-        Me.btnClose.Location = New System.Drawing.Point(300, 373)
+        Me.btnClose.Location = New System.Drawing.Point(300, 257)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(100, 40)
         Me.btnClose.TabIndex = 1
         Me.btnClose.Text = "Cancel"
         Me.btnClose.UseVisualStyleBackColor = False
         '
-        'Label1
-        '
-        Me.Label1.BackColor = System.Drawing.Color.Blue
-        Me.Label1.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(-3, -1)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(490, 67)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Farmers' Registry and Agricultural Commodeties Information System"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'txtUser
         '
         Me.txtUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUser.Location = New System.Drawing.Point(111, 186)
+        Me.txtUser.Location = New System.Drawing.Point(111, 128)
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(248, 26)
         Me.txtUser.TabIndex = 3
@@ -80,7 +71,7 @@ Partial Class frmLogin
         'txtPass
         '
         Me.txtPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass.Location = New System.Drawing.Point(111, 250)
+        Me.txtPass.Location = New System.Drawing.Point(111, 192)
         Me.txtPass.Name = "txtPass"
         Me.txtPass.Size = New System.Drawing.Size(248, 26)
         Me.txtPass.TabIndex = 4
@@ -90,8 +81,8 @@ Partial Class frmLogin
         '
         Me.lblUser.AutoSize = True
         Me.lblUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUser.ForeColor = System.Drawing.Color.White
-        Me.lblUser.Location = New System.Drawing.Point(110, 165)
+        Me.lblUser.ForeColor = System.Drawing.Color.Black
+        Me.lblUser.Location = New System.Drawing.Point(110, 107)
         Me.lblUser.Name = "lblUser"
         Me.lblUser.Size = New System.Drawing.Size(85, 18)
         Me.lblUser.TabIndex = 5
@@ -101,20 +92,54 @@ Partial Class frmLogin
         '
         Me.lblPass.AutoSize = True
         Me.lblPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPass.ForeColor = System.Drawing.Color.White
-        Me.lblPass.Location = New System.Drawing.Point(110, 229)
+        Me.lblPass.ForeColor = System.Drawing.Color.Black
+        Me.lblPass.Location = New System.Drawing.Point(110, 171)
         Me.lblPass.Name = "lblPass"
         Me.lblPass.Size = New System.Drawing.Size(83, 18)
         Me.lblPass.TabIndex = 6
         Me.lblPass.Text = "Password"
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Black
+        Me.Panel1.Location = New System.Drawing.Point(0, 67)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(484, 10)
+        Me.Panel1.TabIndex = 7
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.Label1.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label1.Location = New System.Drawing.Point(66, -1)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(421, 67)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "  Farmers' Registry and Agricultural" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "  Commodeties Information System"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.PictureBox1.Image = Global.FRACIS.My.Resources.Resources.fracis_logo
+        Me.PictureBox1.Location = New System.Drawing.Point(0, -1)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(79, 67)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 8
+        Me.PictureBox1.TabStop = False
+        '
         'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.SlateGray
-        Me.ClientSize = New System.Drawing.Size(484, 461)
+        Me.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.ClientSize = New System.Drawing.Size(484, 345)
         Me.ControlBox = False
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.lblPass)
         Me.Controls.Add(Me.lblUser)
         Me.Controls.Add(Me.txtPass)
@@ -125,6 +150,7 @@ Partial Class frmLogin
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -136,4 +162,6 @@ Partial Class frmLogin
     Friend WithEvents txtPass As System.Windows.Forms.TextBox
     Friend WithEvents lblUser As System.Windows.Forms.Label
     Friend WithEvents lblPass As System.Windows.Forms.Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

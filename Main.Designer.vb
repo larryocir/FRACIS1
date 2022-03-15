@@ -28,6 +28,7 @@ Partial Class frmMain
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnAccount = New System.Windows.Forms.Button()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.btnImports = New System.Windows.Forms.Button()
         Me.Panel10 = New System.Windows.Forms.Panel()
@@ -45,6 +46,7 @@ Partial Class frmMain
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.btnDash = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.lblName = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pnlContainer = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
@@ -109,6 +111,7 @@ Partial Class frmMain
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.btnAccount)
         Me.Panel2.Controls.Add(Me.Panel11)
         Me.Panel2.Controls.Add(Me.Panel10)
         Me.Panel2.Controls.Add(Me.Panel9)
@@ -123,6 +126,24 @@ Partial Class frmMain
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(245, 651)
         Me.Panel2.TabIndex = 2
+        '
+        'btnAccount
+        '
+        Me.btnAccount.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.btnAccount.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnAccount.FlatAppearance.BorderSize = 0
+        Me.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAccount.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAccount.Image = Global.FRACIS.My.Resources.Resources.icons8_account_30
+        Me.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAccount.Location = New System.Drawing.Point(0, 550)
+        Me.btnAccount.Name = "btnAccount"
+        Me.btnAccount.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.btnAccount.Size = New System.Drawing.Size(245, 51)
+        Me.btnAccount.TabIndex = 9
+        Me.btnAccount.Text = "  Account"
+        Me.btnAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnAccount.UseVisualStyleBackColor = False
         '
         'Panel11
         '
@@ -342,6 +363,7 @@ Partial Class frmMain
         '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.lblName)
         Me.Panel3.Controls.Add(Me.PictureBox1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
@@ -349,12 +371,25 @@ Partial Class frmMain
         Me.Panel3.Size = New System.Drawing.Size(245, 200)
         Me.Panel3.TabIndex = 0
         '
+        'lblName
+        '
+        Me.lblName.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(113, Byte), Integer))
+        Me.lblName.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblName.ForeColor = System.Drawing.Color.Black
+        Me.lblName.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblName.Location = New System.Drawing.Point(-3, 158)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(245, 29)
+        Me.lblName.TabIndex = 9
+        Me.lblName.Text = "NAME"
+        Me.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.FRACIS.My.Resources.Resources.farmer_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(29, 17)
+        Me.PictureBox1.Location = New System.Drawing.Point(48, 19)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(173, 171)
+        Me.PictureBox1.Size = New System.Drawing.Size(145, 136)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
@@ -422,4 +457,6 @@ Partial Class frmMain
     Friend WithEvents btnReport As System.Windows.Forms.Button
     Friend WithEvents Panel11 As Panel
     Friend WithEvents btnImports As Button
+    Friend WithEvents btnAccount As Button
+    Friend WithEvents lblName As Label
 End Class

@@ -22,15 +22,36 @@ Public Class frmLogin
         Try
             With cmd
                 .Connection = con
-                .CommandText = "SELECT * FROM account where acc_uname = '" & txtUser.Text & "' and acc_password = '" & txtPass.Text & "'"
+                .CommandText = "SELECT  acc_id, acc_name, acc_position, acc_uname, acc_password FROM account where acc_uname = '" & txtUser.Text & "' and acc_password = '" & txtPass.Text & "'"
                 rowcount = cmd.ExecuteScalar
-                If rowcount = 1 Then
-                    MsgBox("Successfully Login!")
-                    frmMain.Show()
-                    Me.Hide()
-                    con.Close()
+                reader = cmd.ExecuteReader()
+
+
+                If rowcount > 0 Then
+                    Do While reader.Read = True
+                        UserID = reader(2)
+                        Name = reader(1)
+                    Loop
+                    If UserID = "Admin" Then
+                        frmMain.lblName.Text = Name
+                        MsgBox("Successfully Login!")
+                        con.Close()
+                        clear()
+                        frmMain.Show()
+                        Me.Hide()
+
+                    Else
+                        frmMain.lblName.Text = Name
+                        frmMain.btnAccount.Visible =False
+                        MsgBox("Successfully Login!")
+                        con.Close()
+                        clear()
+                        frmMain.Show()
+                        Me.Hide()
+                    End If
+
                 Else
-                    MsgBox("Invalid Username or Passowrd!")
+                        MsgBox("Invalid Username or Passowrd!")
                     clear()
                     con.Close()
                 End If

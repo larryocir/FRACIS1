@@ -52,6 +52,7 @@ Partial Class frmFarmers
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.chkByBarangay = New System.Windows.Forms.CheckBox()
         Me.lblFilter = New System.Windows.Forms.Label()
+        Me.btnDelete = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -83,6 +84,7 @@ Partial Class frmFarmers
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Panel2.Controls.Add(Me.btnDelete)
         Me.Panel2.Controls.Add(Me.btnEdit)
         Me.Panel2.Controls.Add(Me.txtSearch)
         Me.Panel2.Controls.Add(Me.Label2)
@@ -315,6 +317,7 @@ Partial Class frmFarmers
         Me.CheckBox2.TabIndex = 4
         Me.CheckBox2.Text = "By Name"
         Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.CheckBox2.Visible = False
         '
         'chkByBarangay
         '
@@ -337,6 +340,19 @@ Partial Class frmFarmers
         Me.lblFilter.Size = New System.Drawing.Size(39, 17)
         Me.lblFilter.TabIndex = 2
         Me.lblFilter.Text = "Filter"
+        '
+        'btnDelete
+        '
+        Me.btnDelete.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.btnDelete.FlatAppearance.BorderSize = 0
+        Me.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDelete.Location = New System.Drawing.Point(813, 5)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(74, 26)
+        Me.btnDelete.TabIndex = 5
+        Me.btnDelete.Text = "Remove"
+        Me.btnDelete.UseVisualStyleBackColor = False
         '
         'frmFarmers
         '
@@ -392,4 +408,5 @@ Partial Class frmFarmers
     Friend WithEvents Column12 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents btnDelete As Button
 End Class

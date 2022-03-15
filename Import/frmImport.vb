@@ -1,7 +1,7 @@
 ﻿Imports Microsoft.Office.Interop
 Public Class frmImport
-    Public RiceArea, CoconutArea, CornArea, FruitsArea, RootCropsArea, VegetablesArea As Decimal
-    Public ChickenNum, DuckNum, GooseNum, TurkeyNum, CarabaoNum, CattleNum, GoatNum, SwineNum, DogNum, CatNum As Integer
+    Public RiceArea, CoconutArea, CornArea, FruitsArea, RootCropsArea, VegetablesArea As String
+    Public ChickenNum, DuckNum, GooseNum, TurkeyNum, CarabaoNum, CattleNum, GoatNum, SwineNum, DogNum, CatNum As String
 
     Private Sub frmImport_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -115,7 +115,6 @@ Public Class frmImport
                     FruitsArea = DataGridView1.Rows(i).Cells(23).Value.ToString
                     RootCropsArea = DataGridView1.Rows(i).Cells(24).Value.ToString
                     VegetablesArea = DataGridView1.Rows(i).Cells(25).Value.ToString
-
                     ChickenNum = DataGridView1.Rows(i).Cells(26).Value.ToString
                     DuckNum = DataGridView1.Rows(i).Cells(27).Value.ToString
                     GooseNum = DataGridView1.Rows(i).Cells(28).Value.ToString
@@ -128,7 +127,7 @@ Public Class frmImport
                     CatNum = DataGridView1.Rows(i).Cells(35).Value.ToString
 
                     CHECKBOX_INSERT()
-
+                    Call loadTable()
                 Next
 
                 MsgBox("Record has been successfully saved!", vbInformation)
@@ -333,6 +332,29 @@ Public Class frmImport
             con.Close()
         End Try
     End Function
+
+    Sub loadTable()
+        openCon()
+        Try
+            cmd.Connection = con
+            cmd.CommandText = "SELECT * FROM member"
+            reader = cmd.ExecuteReader()
+
+            frmFarmers.dgrdmember.Rows.Clear()
+            Do While reader.Read = True
+                frmFarmers.dgrdmember.Rows.Add(reader(0), reader(1), reader(2), reader(3), reader(4), reader(5), reader(6), reader(7), reader(8), reader(9), reader(10), reader(12), reader(13), reader(14), reader(15))
+            Loop
+            frmFarmers.Label4.Visible = False
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        Finally
+
+            cmd.Dispose()
+            con.Close()
+        End Try
+
+
+    End Sub
 
 
 End Class

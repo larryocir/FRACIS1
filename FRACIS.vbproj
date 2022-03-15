@@ -123,6 +123,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.Designer.vb">
+      <DependentUpon>Account.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Account.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Commodeties\frmCommo.Designer.vb">
       <DependentUpon>frmCommo.vb</DependentUpon>
     </Compile>
@@ -166,6 +172,12 @@
     <Compile Include="Farmers\frmFarmers.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmCreateAccount.Designer.vb">
+      <DependentUpon>frmCreateAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMap.Designer.vb">
       <DependentUpon>frmMap.vb</DependentUpon>
     </Compile>
@@ -192,6 +204,7 @@
     </Compile>
     <Compile Include="Module\dbconnect.vb" />
     <Compile Include="Module\glovar.vb" />
+    <Compile Include="Module\Privilege .vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -221,6 +234,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Account.resx">
+      <DependentUpon>Account.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Commodeties\frmCommo.resx">
       <DependentUpon>frmCommo.vb</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Farmers\frmFarmers.resx">
       <DependentUpon>frmFarmers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateAccount.resx">
+      <DependentUpon>frmCreateAccount.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMap.resx">
       <DependentUpon>frmMap.vb</DependentUpon>
@@ -555,6 +574,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-add-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fracis_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-account-30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

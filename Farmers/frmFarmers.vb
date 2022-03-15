@@ -366,4 +366,60 @@
             loadTable2()
         End If
     End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        GlobalId = dgrdmember.CurrentRow.Cells(0).Value
+        If MsgBox("Are you sure you want to delete this record?", vbYesNo + vbQuestion) = vbYes Then
+            Try
+                openCon()
+                Try
+                    With cmd
+                        .Connection = con
+                        .CommandText = ("DELETE FROM `member` WHERE mem_id = " & GlobalId & "")
+                        .ExecuteNonQuery()
+                    End With
+                Catch ex As Exception
+                    MsgBox(ex.Message, MsgBoxStyle.Exclamation)
+                Finally
+                    con.Close()
+                End Try
+
+
+                openCon()
+                Try
+                    With cmd
+                        .Connection = con
+                        .CommandText = ("DELETE FROM `crops` WHERE crops_id = " & GlobalId & "")
+                        .ExecuteNonQuery()
+                    End With
+                Catch ex As Exception
+                    MsgBox(ex.Message, MsgBoxStyle.Exclamation)
+                Finally
+                    con.Close()
+                End Try
+
+                openCon()
+                Try
+                    With cmd
+                        .Connection = con
+                        .CommandText = ("DELETE FROM `animal` WHERE animal_id = " & GlobalId & "")
+                        .ExecuteNonQuery()
+                    End With
+                Catch ex As Exception
+                    MsgBox(ex.Message, MsgBoxStyle.Exclamation)
+                Finally
+                    con.Close()
+                End Try
+                MsgBox("Successfully deleted.")
+                loadTable2()
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Exclamation)
+            Finally
+                con.Close()
+            End Try
+        End If
+
+
+
+    End Sub
 End Class

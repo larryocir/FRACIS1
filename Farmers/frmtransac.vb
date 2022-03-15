@@ -107,6 +107,8 @@
             ClearAll()
             ClearTextBox(Me)
             ClearCheckBox(Me)
+            Me.Close()
+
         Catch ex As Exception
             MsgBox(ex.ToString)
         Finally

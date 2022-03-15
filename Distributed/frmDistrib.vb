@@ -8,7 +8,15 @@ Public Class frmDistrib
         Me.Width = 845
         Me.Top = (My.Computer.Screen.WorkingArea.Height \ 2) - (Me.Height \ 2)
         Me.Left = (My.Computer.Screen.WorkingArea.Width \ 2) - (Me.Width \ 2)
-        btnClose.Location = New Point(1271, 4)
+        btnClose.Location = New Point(811, 4)
+    End Sub
+
+    Private Sub btnMinimize_Click(sender As Object, e As EventArgs) Handles btnMinimize.Click
+        Me.Width = 845
+        'Me.Location = New Point(50%, 50%)
+        Me.Top = (My.Computer.Screen.WorkingArea.Height \ 2) - (Me.Height \ 2)
+        Me.Left = (My.Computer.Screen.WorkingArea.Width \ 2) - (Me.Width \ 2)
+        btnClose.Location = New Point(811, 4)
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
@@ -217,13 +225,7 @@ Public Class frmDistrib
     End Sub
 
 
-    Private Sub btnMinimize_Click(sender As Object, e As EventArgs) Handles btnMinimize.Click
-        Me.Width = 845
-        'Me.Location = New Point(50%, 50%)
-        Me.Top = (My.Computer.Screen.WorkingArea.Height \ 2) - (Me.Height \ 2)
-        Me.Left = (My.Computer.Screen.WorkingArea.Width \ 2) - (Me.Width \ 2)
-        btnClose.Location = New Point(811, 4)
-    End Sub
+
 
     Private Sub btnDownload_Click(sender As Object, e As EventArgs) Handles btnDownload.Click
         If dgrdreceiver.RowCount = 0 Then
